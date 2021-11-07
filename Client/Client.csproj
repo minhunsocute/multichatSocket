@@ -147,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\image_30px1.png" />
+    <None Include="Resources\image_30px.png" />
+    <None Include="Resources\facebook_like_30px.png" />
+    <None Include="Resources\information_30px1.png" />
+    <None Include="Resources\video_call_30px1.png" />
+    <None Include="Resources\image %281%29.png" />
     <None Include="Resources\information_30px.png" />
     <None Include="Resources\video_call_30px.png" />
     <None Include="Resources\call_30px.png" />

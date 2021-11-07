@@ -55,7 +55,7 @@ namespace Server_manager
         {
             if (s[0] == '1')
             {
-
+                
             }
         }
         // Nhan thong tin tu client

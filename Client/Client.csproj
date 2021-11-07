@@ -83,6 +83,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_server.Designer.cs">
+      <DependentUpon>add_server.cs</DependentUpon>
+    </Compile>
     <Compile Include="CircularBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="add_server.resx">
+      <DependentUpon>add_server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client_TCP.resx">
+      <DependentUpon>client_TCP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\messenger.png" />
     <None Include="Resources\image_30px1.png" />
     <None Include="Resources\image_30px.png" />
     <None Include="Resources\facebook_like_30px.png" />

@@ -14,13 +14,6 @@ namespace Server_manager
 {
     public partial class server_TCP : Form
     {
-        private string conStr = @"Data Source=LAPTOP-DI57MUOG;Initial Catalog=socket_account;Integrated Security=True";
-        private SqlConnection conn;
-        private SqlDataAdapter myAdapter;
-        private SqlCommand comm;
-        private DataSet ds;
-        private DataTable dt;
-
         public server_TCP()
         {
             InitializeComponent();

@@ -15,7 +15,7 @@ namespace Server_manager
 {
     public class sql_manage
     {
-        private string conStr = @"Data Source=LAPTOP-DI57MUOG;Initial Catalog=socket_account;Integrated Security=True";
+        private string conStr = @"Data Source=LAPTOP-DI57MUOG;Initial Catalog=MULTICHAT;Integrated Security=True";
         private SqlConnection conn;
         private SqlDataAdapter myAdapter;
         private SqlCommand comm;

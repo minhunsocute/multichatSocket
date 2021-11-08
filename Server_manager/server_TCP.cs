@@ -24,7 +24,7 @@ namespace Server_manager
         }
         SimpleTcpServer server;
         // xu ly tao open server
-        private void BtnConnect_Click(object sender, EventArgs e)
+        private void BtnConnect_Click(object sender, EventArgs   e)
         {
             if (!string.IsNullOrEmpty(textName.Text) && !string.IsNullOrEmpty(textPort.Text)) {
                 server = new SimpleTcpServer($"{textIP.Text}:{textPort.Text}");

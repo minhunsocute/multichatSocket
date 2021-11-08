@@ -50,9 +50,26 @@ namespace Server_manager
         // kiem tra string de thuc hien cho dung
         private void checkString(string s, DataReceivedEventArgs e)
         {
-            if (s[0] == '1')
-            {
-                
+            if (s[0] == '1'){
+                int i = 1;
+                string username = "";string password = "";
+                while (true) {
+                    if(s[i]!='@')username += s[i];
+                    if (s[i] == '@') {
+                        i++;break;
+                    }
+                    i++;
+                }
+                while (i < s.Length) { 
+                    password += s[i];i++;
+                }
+                sql_manage f = new sql_manage();
+                int check = f.returnNo(username,password);
+                if (check == -1) {
+                    server.Send(e.IpPort, "success");
+                }
+                else
+                    server.Send(e.IpPort, "unsuccess");
             }
         }
         // Nhan thong tin tu client
@@ -60,13 +77,13 @@ namespace Server_manager
         private void Events_DataRecceived(object sender, DataReceivedEventArgs e)
         {
             string s = Encoding.UTF8.GetString(e.Data);
-            checkString(s, e);
+            checkString(s,e);
         }
         // reload lai data gridview khi mot cliend disconnect
         private void Events_ClientDisconnected(object sender, ClientDisconnectedEventArgs e)
         {
             this.Invoke((MethodInvoker)delegate {
-                sql_manage f = new sql_manage();
+                /*sql_manage f = new sql_manage();
                 string s = "";
                 int check = 0;
                 for (int i = 0; i < e.IpPort.Length; i++)
@@ -77,13 +94,13 @@ namespace Server_manager
                         check = -1;
                 }
                 string sqlString = "";
-                f.reLoadgridview(s, sqlString,guna2DataGridView1);
+                f.reLoadgridview(s, sqlString,guna2DataGridView1);*/
             });   
         }
         //reload lai datagridviw khi mot client connect
         private void Events_ClientConnected(object sender, ClientConnectedEventArgs e)
         {
-            sql_manage f = new sql_manage();
+            /*sql_manage f = new sql_manage();
             string s = "";
             int check = 0;
             for(int i = 0; i < e.IpPort.Length; i++) {
@@ -93,7 +110,7 @@ namespace Server_manager
                     check = -1;
             }
             string sqlString = "";
-            f.reLoadgridview(s, sqlString,guna2DataGridView1);
+            f.reLoadgridview(s, sqlString,guna2DataGridView1);*/
         }
         // get IPv4
         public string getIPv4(){

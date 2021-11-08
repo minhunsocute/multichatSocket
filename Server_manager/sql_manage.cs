@@ -34,5 +34,18 @@ namespace Server_manager
             table.DataSource = dt;
             conn.Close();
         }
+        // count number 
+        public int returnNo(string username,string pass) {
+            int check = 0;
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"SELECT COUNT(*) FROM CLIENT WHERE USERNAME ='{username}' AND PASSWORD='{pass}'";
+            comm = new SqlCommand(sqlString,conn);
+            Int32 count = (Int32)comm.ExecuteScalar();
+            conn.Close();
+            if (count != 0) 
+                return -1;
+            return check;
+        }
     }
 }

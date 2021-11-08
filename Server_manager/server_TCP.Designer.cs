@@ -30,17 +30,15 @@ namespace Server_manager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnOUT = new Guna.UI2.WinForms.Guna2Button();
             this.BtnConnect = new Guna.UI2.WinForms.Guna2Button();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +47,16 @@ namespace Server_manager
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textPort = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.textIP = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -70,7 +74,7 @@ namespace Server_manager
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(73)))), ((int)(((byte)(161)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 94);
             this.panel1.TabIndex = 0;
@@ -85,15 +89,6 @@ namespace Server_manager
             this.label1.TabIndex = 1;
             this.label1.Text = "Multi Chat Manage";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::Server_manager.Properties.Resources.messenger;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(14, 21);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(48, 48);
-            this.panel3.TabIndex = 0;
             // 
             // panel2
             // 
@@ -111,7 +106,7 @@ namespace Server_manager
             this.panel2.Controls.Add(this.guna2HtmlLabel1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.textIP);
-            this.panel2.Location = new System.Drawing.Point(12, 112);
+            this.panel2.Location = new System.Drawing.Point(12, 132);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 385);
             this.panel2.TabIndex = 1;
@@ -120,7 +115,6 @@ namespace Server_manager
             // 
             this.btnOUT.BackColor = System.Drawing.Color.White;
             this.btnOUT.BorderRadius = 11;
-            this.btnOUT.BorderThickness = 2;
             this.btnOUT.CheckedState.Parent = this.btnOUT;
             this.btnOUT.CustomImages.Parent = this.btnOUT;
             this.btnOUT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -130,8 +124,8 @@ namespace Server_manager
             this.btnOUT.DisabledState.Parent = this.btnOUT;
             this.btnOUT.Enabled = false;
             this.btnOUT.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(5)))));
-            this.btnOUT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnOUT.ForeColor = System.Drawing.Color.Black;
+            this.btnOUT.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnOUT.ForeColor = System.Drawing.Color.White;
             this.btnOUT.HoverState.Parent = this.btnOUT;
             this.btnOUT.Location = new System.Drawing.Point(257, 331);
             this.btnOUT.Name = "btnOUT";
@@ -144,7 +138,6 @@ namespace Server_manager
             // BtnConnect
             // 
             this.BtnConnect.BorderRadius = 11;
-            this.BtnConnect.BorderThickness = 2;
             this.BtnConnect.CheckedState.Parent = this.BtnConnect;
             this.BtnConnect.CustomImages.Parent = this.BtnConnect;
             this.BtnConnect.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -153,8 +146,8 @@ namespace Server_manager
             this.BtnConnect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BtnConnect.DisabledState.Parent = this.BtnConnect;
             this.BtnConnect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(73)))), ((int)(((byte)(161)))));
-            this.BtnConnect.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnConnect.ForeColor = System.Drawing.Color.Black;
+            this.BtnConnect.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.BtnConnect.ForeColor = System.Drawing.Color.White;
             this.BtnConnect.HoverState.Parent = this.BtnConnect;
             this.BtnConnect.Location = new System.Drawing.Point(21, 331);
             this.BtnConnect.Name = "BtnConnect";
@@ -163,15 +156,6 @@ namespace Server_manager
             this.BtnConnect.TabIndex = 38;
             this.BtnConnect.Text = "Open Server";
             this.BtnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::Server_manager.Properties.Resources.customer;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(11, 93);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(30, 33);
-            this.panel5.TabIndex = 2;
             // 
             // guna2HtmlLabel3
             // 
@@ -185,33 +169,33 @@ namespace Server_manager
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.guna2DataGridView1.ColumnHeadersHeight = 21;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.port});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(14, 141);
@@ -328,15 +312,6 @@ namespace Server_manager
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Port:";
             // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::Server_manager.Properties.Resources.laptop;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(11, 16);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(30, 33);
-            this.panel4.TabIndex = 1;
-            // 
             // textIP
             // 
             this.textIP.BorderColor = System.Drawing.Color.Black;
@@ -375,13 +350,77 @@ namespace Server_manager
             this.guna2Elipse3.BorderRadius = 15;
             this.guna2Elipse3.TargetControl = this.guna2DataGridView1;
             // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::Server_manager.Properties.Resources.customer;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(11, 93);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(30, 33);
+            this.panel5.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::Server_manager.Properties.Resources.laptop;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(11, 16);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(30, 33);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::Server_manager.Properties.Resources.messenger;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(14, 21);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(48, 48);
+            this.panel3.TabIndex = 0;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(243)))));
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(322, -3);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.TabIndex = 11;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(243)))));
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(361, -3);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 10;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 15;
+            this.guna2Elipse4.TargetControl = this;
+            // 
             // server_TCP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 509);
+            this.ClientSize = new System.Drawing.Size(401, 533);
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "server_TCP";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -413,6 +452,10 @@ namespace Server_manager
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Button btnOUT;
         private Guna.UI2.WinForms.Guna2Button BtnConnect;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
     }
 }
 

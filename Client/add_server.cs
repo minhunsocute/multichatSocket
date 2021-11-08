@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimpleTcp;
 
 namespace Client
 {
@@ -19,7 +20,7 @@ namespace Client
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-
+            Sign_In.client.Send(nameServer.Text);
         }
     }
 }

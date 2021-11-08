@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Net;
 
 namespace Server_manager
 {
@@ -17,6 +20,7 @@ namespace Server_manager
         public server_TCP()
         {
             InitializeComponent();
+            textIP.Text = getIPv4();
         }
         SimpleTcpServer server;
         // xu ly tao open server
@@ -90,6 +94,12 @@ namespace Server_manager
             }
             string sqlString = "";
             f.reLoadgridview(s, sqlString,guna2DataGridView1);
+        }
+        // get IPv4
+        public string getIPv4(){
+            string hostName = Dns.GetHostName();
+            string myIP = Dns.GetHostByName(hostName).AddressList[3].ToString();
+            return myIP;
         }
     }
 }

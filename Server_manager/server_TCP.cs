@@ -69,6 +69,7 @@ namespace Server_manager
         private void Events_ClientDisconnected(object sender, ClientDisconnectedEventArgs e)
         {
             this.Invoke((MethodInvoker)delegate {
+                sql_manage f = new sql_manage();
                 string s = "";
                 int check = 0;
                 for (int i = 0; i < e.IpPort.Length; i++)
@@ -79,12 +80,13 @@ namespace Server_manager
                         check = -1;
                 }
                 string sqlString = "";
-                reLoadgridview(s, sqlString);
+                f.reLoadgridview(s, sqlString,guna2DataGridView1);
             });   
         }
         //reload lai datagridviw khi mot client connect
         private void Events_ClientConnected(object sender, ClientConnectedEventArgs e)
         {
+            sql_manage f = new sql_manage();
             string s = "";
             int check = 0;
             for(int i = 0; i < e.IpPort.Length; i++) {
@@ -94,18 +96,7 @@ namespace Server_manager
                     check = -1;
             }
             string sqlString = "";
-            reLoadgridview(s, sqlString);
-        }
-
-        private void reLoadgridview(string s,string sql) {
-            conn = new SqlConnection(conStr);
-            string sqlString = sql;
-            myAdapter = new SqlDataAdapter(sqlString, conn);
-            ds = new DataSet();
-            myAdapter.Fill(ds, "id");
-            dt = ds.Tables["id"];
-            guna2DataGridView1.DataSource = dt;
-            conn.Close();
+            f.reLoadgridview(s, sqlString,guna2DataGridView1);
         }
     }
 }

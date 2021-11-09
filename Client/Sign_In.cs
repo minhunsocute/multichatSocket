@@ -51,9 +51,10 @@ namespace Client
         private void checkString(string s) {
             if (s=="success") {
                 MainForm f = new MainForm();
-                this.Hide();
+                //Cross-thread operation not valid: xu ly loi nay
+                this.Invoke(new Action(()=>{this.Hide();}));
                 f.ShowDialog();
-                this.Show();
+                this.Invoke(new Action(() => { this.Show(); }));
             }
             else if (s=="unsuccess") {
                 //client.Disconnect();
@@ -65,11 +66,12 @@ namespace Client
             checkString(receive);
         }
 
-        private void Event_DisConnected(object sender, ClientDisconnectedEventArgs e)
-        {
+        private void Event_DisConnected(object sender, ClientDisconnectedEventArgs e){
+        
         }
 
         private void Events_Connected(object sender, ClientConnectedEventArgs e){ 
+        
         }
     }
 }

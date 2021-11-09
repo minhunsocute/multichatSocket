@@ -103,6 +103,16 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm {
+            get {
+                object obj = ResourceManager.GetObject("dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap facebook_like_30px {
             get {
                 object obj = ResourceManager.GetObject("facebook_like_30px", resourceCulture);
@@ -186,6 +196,16 @@ namespace Client.Properties {
         internal static System.Drawing.Bitmap information_40px {
             get {
                 object obj = ResourceManager.GetObject("information_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_UIT_Web_Transparent {
+            get {
+                object obj = ResourceManager.GetObject("Logo_UIT_Web_Transparent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

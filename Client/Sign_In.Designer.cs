@@ -32,6 +32,8 @@ namespace Client
             this.components = new System.ComponentModel.Container();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textIP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.BtnConnect = new Guna.UI2.WinForms.Guna2Button();
             this.textPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.textUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -40,9 +42,9 @@ namespace Client
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.textIP = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +65,56 @@ namespace Client
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 325);
             this.panel1.TabIndex = 0;
+            // 
+            // textIP
+            // 
+            this.textIP.BorderColor = System.Drawing.Color.Black;
+            this.textIP.BorderRadius = 8;
+            this.textIP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textIP.DefaultText = "192.168.1.13:9000";
+            this.textIP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textIP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textIP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textIP.DisabledState.Parent = this.textIP;
+            this.textIP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textIP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textIP.FocusedState.Parent = this.textIP;
+            this.textIP.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.textIP.ForeColor = System.Drawing.Color.Black;
+            this.textIP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textIP.HoverState.Parent = this.textIP;
+            this.textIP.Location = new System.Drawing.Point(35, 156);
+            this.textIP.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.textIP.Name = "textIP";
+            this.textIP.PasswordChar = '\0';
+            this.textIP.PlaceholderText = "Ip:Port";
+            this.textIP.SelectedText = "";
+            this.textIP.SelectionStart = 17;
+            this.textIP.ShadowDecoration.Parent = this.textIP;
+            this.textIP.Size = new System.Drawing.Size(322, 49);
+            this.textIP.TabIndex = 41;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 11;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(252)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(73)))), ((int)(((byte)(161)))));
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(83, 286);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(219, 20);
+            this.guna2Button1.TabIndex = 40;
+            this.guna2Button1.Text = "Đăng Ký Tài Khoản";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // BtnConnect
             // 
@@ -179,11 +231,29 @@ namespace Client
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(130, 516);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(137, 521);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(136, 22);
             this.guna2HtmlLabel2.TabIndex = 5;
             this.guna2HtmlLabel2.Text = "Dev by doubleHung";
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::Client.Properties.Resources.Logo_UIT_Web_Transparent;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(105, 521);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(26, 22);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Client.Properties.Resources.dai_hoc_khoa_hoc_tu_nhien_dhqg_hcm;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(279, 521);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(26, 22);
+            this.panel2.TabIndex = 6;
             // 
             // panel3
             // 
@@ -194,67 +264,21 @@ namespace Client
             this.panel3.Size = new System.Drawing.Size(70, 66);
             this.panel3.TabIndex = 3;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 11;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(252)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(73)))), ((int)(((byte)(161)))));
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(83, 286);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(219, 20);
-            this.guna2Button1.TabIndex = 40;
-            this.guna2Button1.Text = "Đăng Ký Tài Khoản";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // textIP
-            // 
-            this.textIP.BorderColor = System.Drawing.Color.Black;
-            this.textIP.BorderRadius = 8;
-            this.textIP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textIP.DefaultText = "192.168.1.13:9000";
-            this.textIP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textIP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textIP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textIP.DisabledState.Parent = this.textIP;
-            this.textIP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textIP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textIP.FocusedState.Parent = this.textIP;
-            this.textIP.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.textIP.ForeColor = System.Drawing.Color.Black;
-            this.textIP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textIP.HoverState.Parent = this.textIP;
-            this.textIP.Location = new System.Drawing.Point(35, 156);
-            this.textIP.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.textIP.Name = "textIP";
-            this.textIP.PasswordChar = '\0';
-            this.textIP.PlaceholderText = "Ip:Port";
-            this.textIP.SelectedText = "";
-            this.textIP.ShadowDecoration.Parent = this.textIP;
-            this.textIP.Size = new System.Drawing.Size(322, 49);
-            this.textIP.TabIndex = 41;
-            // 
             // Sign_In
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(243)))));
             this.ClientSize = new System.Drawing.Size(410, 566);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1920, 1050);
             this.Name = "Sign_In";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -277,6 +301,8 @@ namespace Client
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox textIP;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 

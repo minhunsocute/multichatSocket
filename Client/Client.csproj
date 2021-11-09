@@ -168,6 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Logo_UIT_Web_Transparent.png" />
+    <None Include="Resources\dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm.png" />
     <None Include="Resources\messenger %281%29.png" />
     <None Include="Resources\messenger.png" />
     <None Include="Resources\image_30px1.png" />

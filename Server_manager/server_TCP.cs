@@ -45,6 +45,13 @@ namespace Server_manager
         {
             textName.Text = string.Empty;
             textPort.Text = string.Empty;
+            //foreach (Client item in listCList) {
+            //}
+            foreach(Client item in listCList) {
+                server.Send($"{textIP.Text}:{item.IpPort}", "Disconnect");
+            }
+            guna2DataGridView1.Rows.Clear();
+            guna2DataGridView1.Refresh();
             server.Stop();
             btnOUT.Enabled = false;
             BtnConnect.Enabled = true;
@@ -71,6 +78,8 @@ namespace Server_manager
         private void checkString(string s, DataReceivedEventArgs e)
         {
             sql_manage f = new sql_manage();
+            //guna2TextBox1.Text = string.Empty;
+            //kiem tra dang nhap thanh cong
             if (s[0] == '1'){
                 int i = 1;
                 string username = "";string password = "";
@@ -87,19 +96,18 @@ namespace Server_manager
                 int check = f.returnNo(username,password,1);
                 if (check == -1) {
                     server.Send(e.IpPort, "success");
-                    LoadDataGrid(username,f);
                 }
                 else
                     server.Send(e.IpPort, "unsuccess");
             }
+            // kiem tra dang ky thanh cong
             else if (s[0] == '2') {
                 int i = 1;
                 string username = ""; string password = "";string name = "";
                 while (true)
                 {
                     if (s[i] != '@') username += s[i];
-                    if (s[i] == '@')
-                    {
+                    if (s[i] == '@'){
                         i++; break;
                     }
                     i++;
@@ -107,8 +115,7 @@ namespace Server_manager
                 while (true)
                 {
                     if (s[i] != '@') password += s[i];
-                    if (s[i] == '@')
-                    {
+                    if (s[i] == '@'){
                         i++; break;
                     }
                     i++;
@@ -125,10 +132,18 @@ namespace Server_manager
                 else
                     server.Send(e.IpPort, "unsuccess");
             }
+            //kiem tra nguoi dung out
             else if(s[0]=='3') {
                 string userName = s.Substring(1);
                 f.updateActi(userName, 0);
                 removeDataGrid(userName, f) ;
+            }
+            //kiemm tra MainForm duoc load
+            else if (s[0] == '4') {
+                string userName = "";
+                for (int i = 1; i < s.Length; i++)
+                    userName += s[i];
+                LoadDataGrid(userName, f);
             }
         }
         // Nhan thong tin tu client
@@ -136,6 +151,8 @@ namespace Server_manager
         private void Events_DataRecceived(object sender, DataReceivedEventArgs e)
         {
             string s = Encoding.UTF8.GetString(e.Data);
+            guna2TextBox1.Text = string.Empty;
+            guna2TextBox1.Text = $"{e.IpPort}:{s}";
             checkString(s,e);
         }
         // reload lai data gridview khi mot cliend disconnect
@@ -168,6 +185,11 @@ namespace Server_manager
             string hostName = Dns.GetHostName();
             string myIP = Dns.GetHostByName(hostName).AddressList[3].ToString();
             return myIP;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            server.Send(ipPortConnect, guna2TextBox1.Text);
         }
     }
 }

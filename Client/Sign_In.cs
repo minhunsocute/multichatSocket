@@ -15,7 +15,9 @@ namespace Client
     public partial class Sign_In : Form
     {
         public static SimpleTcpClient client;
-
+        public static int checkServerDisConnect = 0;
+        public static string userName2Form = "";
+        public static string ip2Form = "";
         public Sign_In()
         {
             InitializeComponent();
@@ -46,7 +48,7 @@ namespace Client
                     string send = $"1{textUsername.Text}@{textPass.Text}";
                     client.Send(send);
                 }
-                catch { }
+                catch { }   
             }
             else
             {
@@ -57,10 +59,15 @@ namespace Client
             if (s=="success") {
                 MainForm f = new MainForm();
                 //Cross-thread operation not valid: xu ly loi nay
+                client.Disconnect();
+                userName2Form = string.Empty;userName2Form = textUsername.Text;
+                ip2Form = string.Empty;ip2Form = textIP.Text;
                 this.Invoke(new Action(()=>{this.Hide();}));
                 f.ShowDialog();
                 this.Invoke(new Action(() => { this.Show(); }));
-                client.Send($"3{textUsername.Text}");client.Disconnect();
+                /*if (checkServerDisConnect == 0) { 
+                    client.Send($"3{textUsername.Text}");client.Disconnect();
+                }*/
                 textUsername.Invoke(new Action(() => { textUsername.Text = string.Empty; }));
                 textPass.Invoke(new Action(() => { textPass.Text = string.Empty; }));
             }
@@ -71,6 +78,8 @@ namespace Client
         }
         private void Event_DataReceived(object sender, DataReceivedEventArgs e){
             string receive = Encoding.UTF8.GetString(e.Data);
+            
+                
             checkString(receive);
         }
 

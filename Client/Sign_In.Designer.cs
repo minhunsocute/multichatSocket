@@ -71,7 +71,7 @@ namespace Client
             this.textIP.BorderColor = System.Drawing.Color.Black;
             this.textIP.BorderRadius = 8;
             this.textIP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textIP.DefaultText = "192.168.1.13:9000";
+            this.textIP.DefaultText = "192.168.1.30:9000";
             this.textIP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textIP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textIP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -89,7 +89,6 @@ namespace Client
             this.textIP.PasswordChar = '\0';
             this.textIP.PlaceholderText = "Ip:Port";
             this.textIP.SelectedText = "";
-            this.textIP.SelectionStart = 17;
             this.textIP.ShadowDecoration.Parent = this.textIP;
             this.textIP.Size = new System.Drawing.Size(322, 49);
             this.textIP.TabIndex = 41;

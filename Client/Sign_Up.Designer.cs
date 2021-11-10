@@ -32,16 +32,17 @@ namespace Client
             this.components = new System.ComponentModel.Container();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnConnect = new Guna.UI2.WinForms.Guna2Button();
-            this.textPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.textUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.textRepass = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.textUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.BtnConnect = new Guna.UI2.WinForms.Guna2Button();
+            this.textRepass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@ namespace Client
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(130, 492);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(128, 580);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(136, 22);
             this.guna2HtmlLabel2.TabIndex = 7;
@@ -59,90 +60,15 @@ namespace Client
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.textName);
             this.panel1.Controls.Add(this.textRepass);
             this.panel1.Controls.Add(this.BtnConnect);
             this.panel1.Controls.Add(this.textPass);
             this.panel1.Controls.Add(this.textUsername);
-            this.panel1.Location = new System.Drawing.Point(8, 172);
+            this.panel1.Location = new System.Drawing.Point(6, 178);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 305);
+            this.panel1.Size = new System.Drawing.Size(386, 368);
             this.panel1.TabIndex = 6;
-            // 
-            // BtnConnect
-            // 
-            this.BtnConnect.BorderRadius = 11;
-            this.BtnConnect.CheckedState.Parent = this.BtnConnect;
-            this.BtnConnect.CustomImages.Parent = this.BtnConnect;
-            this.BtnConnect.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnConnect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnConnect.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnConnect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnConnect.DisabledState.Parent = this.BtnConnect;
-            this.BtnConnect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(73)))), ((int)(((byte)(161)))));
-            this.BtnConnect.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.BtnConnect.ForeColor = System.Drawing.Color.White;
-            this.BtnConnect.HoverState.Parent = this.BtnConnect;
-            this.BtnConnect.Location = new System.Drawing.Point(35, 224);
-            this.BtnConnect.Name = "BtnConnect";
-            this.BtnConnect.ShadowDecoration.Parent = this.BtnConnect;
-            this.BtnConnect.Size = new System.Drawing.Size(322, 49);
-            this.BtnConnect.TabIndex = 39;
-            this.BtnConnect.Text = "Đăng Ký";
-            this.BtnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
-            // 
-            // textPass
-            // 
-            this.textPass.BorderColor = System.Drawing.Color.Black;
-            this.textPass.BorderRadius = 8;
-            this.textPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPass.DefaultText = "";
-            this.textPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textPass.DisabledState.Parent = this.textPass;
-            this.textPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textPass.FocusedState.Parent = this.textPass;
-            this.textPass.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.textPass.ForeColor = System.Drawing.Color.Black;
-            this.textPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textPass.HoverState.Parent = this.textPass;
-            this.textPass.Location = new System.Drawing.Point(35, 96);
-            this.textPass.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.textPass.Name = "textPass";
-            this.textPass.PasswordChar = '\0';
-            this.textPass.PlaceholderText = "Mật khẩu";
-            this.textPass.SelectedText = "";
-            this.textPass.ShadowDecoration.Parent = this.textPass;
-            this.textPass.Size = new System.Drawing.Size(322, 49);
-            this.textPass.TabIndex = 2;
-            // 
-            // textUsername
-            // 
-            this.textUsername.BorderColor = System.Drawing.Color.Black;
-            this.textUsername.BorderRadius = 8;
-            this.textUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textUsername.DefaultText = "";
-            this.textUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textUsername.DisabledState.Parent = this.textUsername;
-            this.textUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textUsername.FocusedState.Parent = this.textUsername;
-            this.textUsername.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.textUsername.ForeColor = System.Drawing.Color.Black;
-            this.textUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textUsername.HoverState.Parent = this.textUsername;
-            this.textUsername.Location = new System.Drawing.Point(35, 33);
-            this.textUsername.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.textUsername.Name = "textUsername";
-            this.textUsername.PasswordChar = '\0';
-            this.textUsername.PlaceholderText = "Email hoặc số điện thoại";
-            this.textUsername.SelectedText = "";
-            this.textUsername.ShadowDecoration.Parent = this.textUsername;
-            this.textUsername.Size = new System.Drawing.Size(322, 49);
-            this.textUsername.TabIndex = 1;
             // 
             // guna2DragControl1
             // 
@@ -172,33 +98,7 @@ namespace Client
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 8;
-            // 
-            // textRepass
-            // 
-            this.textRepass.BorderColor = System.Drawing.Color.Black;
-            this.textRepass.BorderRadius = 8;
-            this.textRepass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textRepass.DefaultText = "";
-            this.textRepass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textRepass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textRepass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textRepass.DisabledState.Parent = this.textRepass;
-            this.textRepass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textRepass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textRepass.FocusedState.Parent = this.textRepass;
-            this.textRepass.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.textRepass.ForeColor = System.Drawing.Color.Black;
-            this.textRepass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textRepass.HoverState.Parent = this.textRepass;
-            this.textRepass.Location = new System.Drawing.Point(35, 156);
-            this.textRepass.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.textRepass.Name = "textRepass";
-            this.textRepass.PasswordChar = '\0';
-            this.textRepass.PlaceholderText = "Nhập lại mật khẩu";
-            this.textRepass.SelectedText = "";
-            this.textRepass.ShadowDecoration.Parent = this.textRepass;
-            this.textRepass.Size = new System.Drawing.Size(322, 49);
-            this.textRepass.TabIndex = 40;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // panel3
             // 
@@ -219,11 +119,141 @@ namespace Client
             this.guna2Elipse2.BorderRadius = 15;
             this.guna2Elipse2.TargetControl = this.panel1;
             // 
+            // textUsername
+            // 
+            this.textUsername.BorderColor = System.Drawing.Color.Black;
+            this.textUsername.BorderRadius = 8;
+            this.textUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textUsername.DefaultText = "";
+            this.textUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textUsername.DisabledState.Parent = this.textUsername;
+            this.textUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textUsername.FocusedState.Parent = this.textUsername;
+            this.textUsername.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.textUsername.ForeColor = System.Drawing.Color.Black;
+            this.textUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textUsername.HoverState.Parent = this.textUsername;
+            this.textUsername.Location = new System.Drawing.Point(37, 94);
+            this.textUsername.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.textUsername.Name = "textUsername";
+            this.textUsername.PasswordChar = '\0';
+            this.textUsername.PlaceholderText = "Email hoặc số điện thoại";
+            this.textUsername.SelectedText = "";
+            this.textUsername.ShadowDecoration.Parent = this.textUsername;
+            this.textUsername.Size = new System.Drawing.Size(322, 49);
+            this.textUsername.TabIndex = 1;
+            // 
+            // textPass
+            // 
+            this.textPass.BorderColor = System.Drawing.Color.Black;
+            this.textPass.BorderRadius = 8;
+            this.textPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textPass.DefaultText = "";
+            this.textPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textPass.DisabledState.Parent = this.textPass;
+            this.textPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textPass.FocusedState.Parent = this.textPass;
+            this.textPass.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.textPass.ForeColor = System.Drawing.Color.Black;
+            this.textPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textPass.HoverState.Parent = this.textPass;
+            this.textPass.Location = new System.Drawing.Point(37, 157);
+            this.textPass.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.textPass.Name = "textPass";
+            this.textPass.PasswordChar = '\0';
+            this.textPass.PlaceholderText = "Mật khẩu";
+            this.textPass.SelectedText = "";
+            this.textPass.ShadowDecoration.Parent = this.textPass;
+            this.textPass.Size = new System.Drawing.Size(322, 49);
+            this.textPass.TabIndex = 2;
+            // 
+            // BtnConnect
+            // 
+            this.BtnConnect.BorderRadius = 11;
+            this.BtnConnect.CheckedState.Parent = this.BtnConnect;
+            this.BtnConnect.CustomImages.Parent = this.BtnConnect;
+            this.BtnConnect.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnConnect.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnConnect.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnConnect.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnConnect.DisabledState.Parent = this.BtnConnect;
+            this.BtnConnect.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(73)))), ((int)(((byte)(161)))));
+            this.BtnConnect.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.BtnConnect.ForeColor = System.Drawing.Color.White;
+            this.BtnConnect.HoverState.Parent = this.BtnConnect;
+            this.BtnConnect.Location = new System.Drawing.Point(37, 285);
+            this.BtnConnect.Name = "BtnConnect";
+            this.BtnConnect.ShadowDecoration.Parent = this.BtnConnect;
+            this.BtnConnect.Size = new System.Drawing.Size(322, 49);
+            this.BtnConnect.TabIndex = 39;
+            this.BtnConnect.Text = "Đăng Ký";
+            this.BtnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
+            // 
+            // textRepass
+            // 
+            this.textRepass.BorderColor = System.Drawing.Color.Black;
+            this.textRepass.BorderRadius = 8;
+            this.textRepass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textRepass.DefaultText = "";
+            this.textRepass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textRepass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textRepass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textRepass.DisabledState.Parent = this.textRepass;
+            this.textRepass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textRepass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textRepass.FocusedState.Parent = this.textRepass;
+            this.textRepass.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.textRepass.ForeColor = System.Drawing.Color.Black;
+            this.textRepass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textRepass.HoverState.Parent = this.textRepass;
+            this.textRepass.Location = new System.Drawing.Point(37, 217);
+            this.textRepass.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.textRepass.Name = "textRepass";
+            this.textRepass.PasswordChar = '\0';
+            this.textRepass.PlaceholderText = "Nhập lại mật khẩu";
+            this.textRepass.SelectedText = "";
+            this.textRepass.ShadowDecoration.Parent = this.textRepass;
+            this.textRepass.Size = new System.Drawing.Size(322, 49);
+            this.textRepass.TabIndex = 40;
+            // 
+            // textName
+            // 
+            this.textName.BorderColor = System.Drawing.Color.Black;
+            this.textName.BorderRadius = 8;
+            this.textName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textName.DefaultText = "";
+            this.textName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textName.DisabledState.Parent = this.textName;
+            this.textName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textName.FocusedState.Parent = this.textName;
+            this.textName.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.textName.ForeColor = System.Drawing.Color.Black;
+            this.textName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textName.HoverState.Parent = this.textName;
+            this.textName.Location = new System.Drawing.Point(37, 31);
+            this.textName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.textName.Name = "textName";
+            this.textName.PasswordChar = '\0';
+            this.textName.PlaceholderText = "Họ và tên";
+            this.textName.SelectedText = "";
+            this.textName.ShadowDecoration.Parent = this.textName;
+            this.textName.Size = new System.Drawing.Size(322, 49);
+            this.textName.TabIndex = 41;
+            // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 526);
+            this.ClientSize = new System.Drawing.Size(404, 625);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
@@ -242,15 +272,16 @@ namespace Client
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button BtnConnect;
-        private Guna.UI2.WinForms.Guna2TextBox textPass;
-        private Guna.UI2.WinForms.Guna2TextBox textUsername;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2TextBox textRepass;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2TextBox textName;
+        private Guna.UI2.WinForms.Guna2TextBox textRepass;
+        private Guna.UI2.WinForms.Guna2Button BtnConnect;
+        private Guna.UI2.WinForms.Guna2TextBox textPass;
+        private Guna.UI2.WinForms.Guna2TextBox textUsername;
     }
 }

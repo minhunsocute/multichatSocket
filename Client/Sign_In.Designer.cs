@@ -300,9 +300,9 @@ namespace Client
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox textIP;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        public Guna.UI2.WinForms.Guna2TextBox textIP;
     }
 }
 

@@ -22,6 +22,8 @@ namespace Server_manager
             InitializeComponent();
             textIP.Text = getIPv4();
         }
+        public static List<Client> listCList = new List<Client>();
+        string ipPortConnect = "";
         SimpleTcpServer server;
         // xu ly tao open server
         private void BtnConnect_Click(object sender, EventArgs   e)
@@ -47,9 +49,28 @@ namespace Server_manager
             btnOUT.Enabled = false;
             BtnConnect.Enabled = true;
         }
+        private void LoadDataGrid(string username,sql_manage f) {
+            guna2DataGridView1.Rows.Clear();
+            guna2DataGridView1.Refresh();
+            f.updateActi(username,1);
+            int inDex = ipPortConnect.IndexOf(':');
+            f.Loaddata(guna2DataGridView1, ipPortConnect.Substring(inDex+1), username,0);
+        }
+        public void removeDataGrid(string username,sql_manage f) {
+            guna2DataGridView1.Rows.Clear();
+            guna2DataGridView1.Refresh();
+            int i = 0;
+            foreach(Client item in listCList) {
+                if (item.Name == username) break;
+                i++;
+            }
+            listCList.RemoveAt(i);
+            f.Loaddata(guna2DataGridView1, ipPortConnect, username, 1);
+        }
         // kiem tra string de thuc hien cho dung
         private void checkString(string s, DataReceivedEventArgs e)
         {
+            sql_manage f = new sql_manage();
             if (s[0] == '1'){
                 int i = 1;
                 string username = "";string password = "";
@@ -63,13 +84,51 @@ namespace Server_manager
                 while (i < s.Length) { 
                     password += s[i];i++;
                 }
-                sql_manage f = new sql_manage();
-                int check = f.returnNo(username,password);
+                int check = f.returnNo(username,password,1);
                 if (check == -1) {
+                    server.Send(e.IpPort, "success");
+                    LoadDataGrid(username,f);
+                }
+                else
+                    server.Send(e.IpPort, "unsuccess");
+            }
+            else if (s[0] == '2') {
+                int i = 1;
+                string username = ""; string password = "";string name = "";
+                while (true)
+                {
+                    if (s[i] != '@') username += s[i];
+                    if (s[i] == '@')
+                    {
+                        i++; break;
+                    }
+                    i++;
+                }
+                while (true)
+                {
+                    if (s[i] != '@') password += s[i];
+                    if (s[i] == '@')
+                    {
+                        i++; break;
+                    }
+                    i++;
+                }
+                while (i < s.Length)
+                {
+                    name += s[i]; i++;
+                }
+                int check = f.returnNo(username, password,2);
+                if (check == 0) {
+                    f.inserAccount(username, password, name);
                     server.Send(e.IpPort, "success");
                 }
                 else
                     server.Send(e.IpPort, "unsuccess");
+            }
+            else if(s[0]=='3') {
+                string userName = s.Substring(1);
+                f.updateActi(userName, 0);
+                removeDataGrid(userName, f) ;
             }
         }
         // Nhan thong tin tu client
@@ -95,22 +154,14 @@ namespace Server_manager
                 }
                 string sqlString = "";
                 f.reLoadgridview(s, sqlString,guna2DataGridView1);*/
+                ipPortConnect = e.IpPort;
             });   
         }
         //reload lai datagridviw khi mot client connect
         private void Events_ClientConnected(object sender, ClientConnectedEventArgs e)
         {
-            /*sql_manage f = new sql_manage();
-            string s = "";
-            int check = 0;
-            for(int i = 0; i < e.IpPort.Length; i++) {
-                if (check == -1)
-                    s += e.IpPort[i];
-                if (e.IpPort[i] == ':')
-                    check = -1;
-            }
-            string sqlString = "";
-            f.reLoadgridview(s, sqlString,guna2DataGridView1);*/
+            ipPortConnect = string.Empty;
+            ipPortConnect = e.IpPort;
         }
         // get IPv4
         public string getIPv4(){

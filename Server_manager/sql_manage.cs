@@ -35,17 +35,61 @@ namespace Server_manager
             conn.Close();
         }
         // count number 
-        public int returnNo(string username,string pass) {
+        public int returnNo(string username,string pass,int type) {
             int check = 0;
             conn = new SqlConnection(conStr);
             conn.Open();
-            string sqlString = $"SELECT COUNT(*) FROM CLIENT WHERE USERNAME ='{username}' AND PASSWORD='{pass}'";
+            string sqlString="";
+            if(type == 1) { 
+                sqlString = $"SELECT COUNT(*) FROM CLIENT WHERE USERNAME ='{username}' AND PASSWORD='{pass}'";
+            }
+            else { 
+                sqlString = $"SELECT COUNT(*) FROM CLIENT WHERE USERNAME ='{username}'";
+            }
             comm = new SqlCommand(sqlString,conn);
             Int32 count = (Int32)comm.ExecuteScalar();
             conn.Close();
             if (count != 0) 
                 return -1;
             return check;
+        }
+        public void inserAccount(string username,string pass,string name) {
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            try { 
+                string sqlString = $"INSERT INTO CLIENT (USERNAME,PASSWORD,NAME_INMESSAGE,TYPE_ACTI) VALUES('{username}'," +
+                                $"'{pass}',N'{name}',0)";
+                comm = new SqlCommand(sqlString, conn);
+                comm.ExecuteNonQuery();
+            }
+            catch { }
+            conn.Close();
+        }
+        public void updateActi(string userName,int type) {
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = "";
+            if (type == 1) { 
+                sqlString = $"UPDATE CLIENT SET TYPE_ACTI = 1 WHERE USERNAME = '{userName}'";
+            }
+            else {
+                sqlString = $"UPDATE CLIENT SET TYPE_ACTI = 0 WHERE USERNAME = '{userName}'";
+            }
+            comm = new SqlCommand(sqlString, conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void Loaddata(DataGridView table,string ipPort,string userName,int type) {
+            if (type == 0) { 
+                Client c = new Client(userName,ipPort);
+                server_TCP.listCList.Add(c);
+            }
+            foreach(Client item in server_TCP.listCList) {
+                DataGridViewRow row = (DataGridViewRow)table.Rows[0].Clone();
+                row.Cells[0].Value = item.Name;
+                row.Cells[1].Value = item.IpPort;
+                table.Rows.Add(row);
+            }
         }
     }
 }

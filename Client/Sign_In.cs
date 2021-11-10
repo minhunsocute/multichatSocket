@@ -23,10 +23,15 @@ namespace Client
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Sign_Up f = new Sign_Up();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            if (!string.IsNullOrEmpty(textIP.Text)) {
+                Sign_Up f = new Sign_Up();
+                this.Invoke(new Action(() => { this.Hide(); }));
+                f.ShowDialog();
+                this.Invoke(new Action(() => { this.Show(); }));
+            }
+            else {
+                MessageBox.Show("IP:Port is Empty", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnConnect_Click(object sender, EventArgs e)
@@ -55,6 +60,9 @@ namespace Client
                 this.Invoke(new Action(()=>{this.Hide();}));
                 f.ShowDialog();
                 this.Invoke(new Action(() => { this.Show(); }));
+                client.Send($"3{textUsername.Text}");client.Disconnect();
+                textUsername.Invoke(new Action(() => { textUsername.Text = string.Empty; }));
+                textPass.Invoke(new Action(() => { textPass.Text = string.Empty; }));
             }
             else if (s=="unsuccess") {
                 //client.Disconnect();

@@ -95,6 +95,12 @@
     <Compile Include="CircularPicture.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ListClietnActi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListClietnActi.Designer.cs">
+      <DependentUpon>ListClietnActi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_face.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="add_server.resx">
       <DependentUpon>add_server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClietnActi.resx">
+      <DependentUpon>ListClietnActi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_face.resx">
       <DependentUpon>Main_face.cs</DependentUpon>

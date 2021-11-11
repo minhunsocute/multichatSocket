@@ -89,6 +89,7 @@ namespace Client
             this.textIP.PasswordChar = '\0';
             this.textIP.PlaceholderText = "Ip:Port";
             this.textIP.SelectedText = "";
+            this.textIP.SelectionStart = 17;
             this.textIP.ShadowDecoration.Parent = this.textIP;
             this.textIP.Size = new System.Drawing.Size(322, 49);
             this.textIP.TabIndex = 41;
@@ -142,7 +143,7 @@ namespace Client
             this.textPass.BorderColor = System.Drawing.Color.Black;
             this.textPass.BorderRadius = 8;
             this.textPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPass.DefaultText = "";
+            this.textPass.DefaultText = "20112002";
             this.textPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -160,6 +161,7 @@ namespace Client
             this.textPass.PasswordChar = '\0';
             this.textPass.PlaceholderText = "Mật khẩu";
             this.textPass.SelectedText = "";
+            this.textPass.SelectionStart = 8;
             this.textPass.ShadowDecoration.Parent = this.textPass;
             this.textPass.Size = new System.Drawing.Size(322, 49);
             this.textPass.TabIndex = 2;
@@ -169,7 +171,7 @@ namespace Client
             this.textUsername.BorderColor = System.Drawing.Color.Black;
             this.textUsername.BorderRadius = 8;
             this.textUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textUsername.DefaultText = "";
+            this.textUsername.DefaultText = "hung";
             this.textUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -187,6 +189,7 @@ namespace Client
             this.textUsername.PasswordChar = '\0';
             this.textUsername.PlaceholderText = "Email hoặc số điện thoại";
             this.textUsername.SelectedText = "";
+            this.textUsername.SelectionStart = 4;
             this.textUsername.ShadowDecoration.Parent = this.textUsername;
             this.textUsername.Size = new System.Drawing.Size(322, 49);
             this.textUsername.TabIndex = 1;

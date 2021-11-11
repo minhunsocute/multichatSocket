@@ -48,13 +48,14 @@ namespace Server_manager
             //foreach (Client item in listCList) {
             //}
             foreach(Client item in listCList) {
-                server.Send($"{textIP.Text}:{item.IpPort}", "Disconnect");
+                server.Send($"{textIP.Text}:{item.IpPort}", "1Disconnect");
             }
             guna2DataGridView1.Rows.Clear();
             guna2DataGridView1.Refresh();
             server.Stop();
             btnOUT.Enabled = false;
             BtnConnect.Enabled = true;
+            (new sql_manage()).refreshAllData();
         }
         private void LoadDataGrid(string username,sql_manage f) {
             guna2DataGridView1.Rows.Clear();
@@ -144,7 +145,13 @@ namespace Server_manager
                 for (int i = 1; i < s.Length; i++)
                     userName += s[i];
                 LoadDataGrid(userName, f);
+                string sendString = f.getListClientActi(s.Substring(1));
+                server.Send(e.IpPort, sendString);
             }
+            /*else if (s[0] == '6') {
+                string sendString = f.getListClientActi(s.Substring(1));
+                server.Send(e.IpPort, sendString);
+            }*/
         }
         // Nhan thong tin tu client
         //e la 1 client nhan

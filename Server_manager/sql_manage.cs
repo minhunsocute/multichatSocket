@@ -91,5 +91,28 @@ namespace Server_manager
                 table.Rows.Add(row);
             }
         }
+        public string  getListClientActi(string userName) {
+            string sendString = "6";
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"SELECT USERNAME FROM CLIENT WHERE USERNAME != '{userName}' AND TYPE_ACTI = 1";
+            myAdapter = new SqlDataAdapter(sqlString,conn);
+            ds = new DataSet();
+            dt = new DataTable();
+            myAdapter.Fill(dt);
+            for(int i = 0; i < dt.Rows.Count; i++) {
+                sendString += $"{dt.Rows[i][0].ToString()}@" ;
+            }
+            conn.Close();
+            return sendString;
+        }
+        public  void refreshAllData() {
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = "UPDATE CLIENT SET TYPE_ACTI =1";
+            comm = new SqlCommand(sqlString, conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

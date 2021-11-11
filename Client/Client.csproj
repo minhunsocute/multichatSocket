@@ -95,6 +95,12 @@
     <Compile Include="CircularPicture.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Main_face.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_face.Designer.cs">
+      <DependentUpon>Main_face.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign_In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="add_server.resx">
       <DependentUpon>add_server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_face.resx">
+      <DependentUpon>Main_face.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_In.resx">
       <DependentUpon>Sign_In.cs</DependentUpon>
@@ -168,6 +177,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\search2.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\facebook-logo.png" />
+    <None Include="Resources\facebook1.png" />
+    <None Include="Resources\facebook %281%29.png" />
+    <None Include="Resources\facebook.png" />
     <None Include="Resources\Logo_UIT_Web_Transparent.png" />
     <None Include="Resources\dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm.png" />
     <None Include="Resources\messenger %281%29.png" />

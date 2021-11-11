@@ -57,7 +57,7 @@ namespace Client
         }
         private void checkString(string s) {
             if (s=="success") {
-                MainForm f = new MainForm();
+                Main_face f = new Main_face();
                 //Cross-thread operation not valid: xu ly loi nay
                 client.Disconnect();
                 userName2Form = string.Empty;userName2Form = textUsername.Text;

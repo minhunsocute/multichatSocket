@@ -20,8 +20,8 @@ namespace Client
             LoadConnect();
         }
         private void LoadConnect() {
-            Sign_In f = new Sign_In();
-            client = new SimpleTcpClient(f.textIP.Text);
+//            Sign_In f = new Sign_In();
+            client = new SimpleTcpClient(Sign_In.ip2Form);
             client.Events.DataReceived += Event_DataReceived;
             try {
                 client.Connect();

@@ -26,6 +26,7 @@ namespace Client
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textIP.Text)) {
+                ip2Form = string.Empty;ip2Form = textIP.Text;
                 Sign_Up f = new Sign_Up();
                 this.Invoke(new Action(() => { this.Hide(); }));
                 f.ShowDialog();

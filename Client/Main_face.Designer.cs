@@ -64,7 +64,6 @@ namespace Client
             this.circularPicture1 = new Client.CircularPicture();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.listClietnActi1 = new Client.ListClietnActi();
             this.searchMessage = new MetroFramework.Controls.MetroTextBox();
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -103,7 +102,6 @@ namespace Client
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -610,18 +608,10 @@ namespace Client
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.listClietnActi1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 101);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 403);
             this.flowLayoutPanel1.TabIndex = 11;
-            // 
-            // listClietnActi1
-            // 
-            this.listClietnActi1.Location = new System.Drawing.Point(3, 3);
-            this.listClietnActi1.Name = "listClietnActi1";
-            this.listClietnActi1.Size = new System.Drawing.Size(180, 48);
-            this.listClietnActi1.TabIndex = 0;
             // 
             // searchMessage
             // 
@@ -948,7 +938,6 @@ namespace Client
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1023,7 +1012,6 @@ namespace Client
         private CircularBtn circularBtn11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private ListClietnActi listClietnActi1;
         public System.Windows.Forms.Label label2;
     }
 }

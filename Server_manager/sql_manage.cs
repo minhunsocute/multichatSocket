@@ -95,7 +95,7 @@ namespace Server_manager
             string sendString = "6";
             conn = new SqlConnection(conStr);
             conn.Open();
-            string sqlString = $"SELECT USERNAME FROM CLIENT WHERE USERNAME != '{userName}' AND TYPE_ACTI = 1";
+            string sqlString = $"SELECT USERNAME FROM CLIENT WHERE TYPE_ACTI = 1";
             myAdapter = new SqlDataAdapter(sqlString,conn);
             ds = new DataSet();
             dt = new DataTable();
@@ -109,7 +109,15 @@ namespace Server_manager
         public  void refreshAllData() {
             conn = new SqlConnection(conStr);
             conn.Open();
-            string sqlString = "UPDATE CLIENT SET TYPE_ACTI =1";
+            string sqlString = "UPDATE CLIENT SET TYPE_ACTI = 0";
+            comm = new SqlCommand(sqlString, conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void updateAvt(string userName,string Image) {
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"UPDATE CLIENT SET AVT={Image} WHERE USERNAME ={userName}";
             comm = new SqlCommand(sqlString, conn);
             comm.ExecuteNonQuery();
             conn.Close();

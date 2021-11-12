@@ -50,17 +50,20 @@ namespace Client
                     guna2TextBox1.Text += $"{s}{Environment.NewLine}";
                     string clietString = "";
                     listClient = new List<ListClietnActi>();
+                    flowLayoutPanel1.Controls.Clear();
                     for(int i = 1; i < s.Length; i++) {
                         if (s[i] != '@')
                             clietString += s[i];
                         else if (s[i] == '@') {
-                            ListClietnActi f = new ListClietnActi();
-                            f.nameText.Text= clietString;
-                            f.Tag = clietString;
-                            f.Click += lable_click;
+                            if (clietString != textNameF.Text) { 
+                                ListClietnActi f = new ListClietnActi();
+                                f.nameText.Text= clietString;
+                                listClient.Add(f);
+                                f.Tag = clietString;
+                                f.Click += lable_click;
+                            }
                             clietString = "";
                             //flowLayoutPanel1.Controls.Add(f);                        
-                            listClient.Add(f);
                         }
                     }
                     foreach(ListClietnActi item in listClient) {

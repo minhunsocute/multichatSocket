@@ -105,24 +105,20 @@ namespace Server_manager
             else if (s[0] == '2') {
                 int i = 1;
                 string username = ""; string password = "";string name = "";
-                while (true)
-                {
+                while (true){
                     if (s[i] != '@') username += s[i];
                     if (s[i] == '@'){
                         i++; break;
-                    }
-                    i++;
+                    }i++;
                 }
                 while (true)
                 {
                     if (s[i] != '@') password += s[i];
                     if (s[i] == '@'){
                         i++; break;
-                    }
-                    i++;
+                    }i++;
                 }
-                while (i < s.Length)
-                {
+                while (i < s.Length){
                     name += s[i]; i++;
                 }
                 int check = f.returnNo(username, password,2);
@@ -137,7 +133,12 @@ namespace Server_manager
             else if(s[0]=='3') {
                 string userName = s.Substring(1);
                 f.updateActi(userName, 0);
-                removeDataGrid(userName, f) ;
+                removeDataGrid(userName, f);
+                string sendString = f.getListClientActi(s.Substring(1));
+                foreach (Client item in listCList)
+                {
+                    server.Send($"{textIP.Text}:{item.IpPort}", sendString);
+                }
             }
             //kiemm tra MainForm duoc load
             else if (s[0] == '4') {
@@ -146,12 +147,14 @@ namespace Server_manager
                     userName += s[i];
                 LoadDataGrid(userName, f);
                 string sendString = f.getListClientActi(s.Substring(1));
-                server.Send(e.IpPort, sendString);
+                foreach (Client item in listCList) {
+                    server.Send($"{textIP.Text}:{item.IpPort}", sendString);
+                }
             }
-            /*else if (s[0] == '6') {
-                string sendString = f.getListClientActi(s.Substring(1));
-                server.Send(e.IpPort, sendString);
-            }*/
+            else if (s[0] == '7') {
+                int Index = s.IndexOf('@');
+                f.updateAvt(s.Substring(1,Index-1),s.Substring(Index+1));
+            }
         }
         // Nhan thong tin tu client
         //e la 1 client nhan
@@ -166,18 +169,6 @@ namespace Server_manager
         private void Events_ClientDisconnected(object sender, ClientDisconnectedEventArgs e)
         {
             this.Invoke((MethodInvoker)delegate {
-                /*sql_manage f = new sql_manage();
-                string s = "";
-                int check = 0;
-                for (int i = 0; i < e.IpPort.Length; i++)
-                {
-                    if (check == -1)
-                        s += e.IpPort[i];
-                    if (e.IpPort[i] == ':')
-                        check = -1;
-                }
-                string sqlString = "";
-                f.reLoadgridview(s, sqlString,guna2DataGridView1);*/
                 ipPortConnect = e.IpPort;
             });   
         }
@@ -197,6 +188,18 @@ namespace Server_manager
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             server.Send(ipPortConnect, guna2TextBox1.Text);
+        }
+
+        // xu ly khi server dung dot ngot
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            foreach(Client item in listCList) {
+                server.Send($"{textIP.Text}:{item.IpPort}", "1Disconnect");
+            }
+            guna2DataGridView1.Rows.Clear();
+            guna2DataGridView1.Refresh();
+            server.Stop();
+            (new sql_manage()).refreshAllData();
         }
     }
 }

@@ -27,17 +27,31 @@ namespace Client
         private void ListClietnActi_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = DefaultBackColor;
+            nameText.BackColor = DefaultBackColor;
         }
 
         private void ListClietnActi_MouseEnter(object sender, EventArgs e)
         {
             this.BackColor = Color.Silver;
+            nameText.BackColor = Color.Silver;
         }
 
         private void ListClietnActi_Click(object sender, EventArgs e)
         {
             Main_face f = new Main_face();
             
+        }
+
+        private void nameText_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Silver;
+            nameText.BackColor = Color.Silver;
+        }
+
+        private void nameText_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = DefaultBackColor;
+            nameText.BackColor = DefaultBackColor;
         }
     }
 }

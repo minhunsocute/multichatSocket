@@ -29,34 +29,14 @@ namespace Client
         /// </summary>
         private void InitializeComponent()
         {
-            this.avt = new Client.CircularPicture();
-            this.acti = new Client.CircularPicture();
             this.nameText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
+            this.acti = new Client.CircularPicture();
+            this.avt = new Client.CircularPicture();
             ((System.ComponentModel.ISupportInitialize)(this.acti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
             this.SuspendLayout();
-            // 
-            // avt
-            // 
-            this.avt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.avt.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
-            this.avt.Location = new System.Drawing.Point(11, 3);
-            this.avt.Name = "avt";
-            this.avt.Size = new System.Drawing.Size(39, 42);
-            this.avt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.avt.TabIndex = 20;
-            this.avt.TabStop = false;
-            // 
-            // acti
-            // 
-            this.acti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(162)))), ((int)(((byte)(76)))));
-            this.acti.Location = new System.Drawing.Point(45, 33);
-            this.acti.Name = "acti";
-            this.acti.Size = new System.Drawing.Size(10, 10);
-            this.acti.TabIndex = 21;
-            this.acti.TabStop = false;
             // 
             // nameText
             // 
@@ -68,6 +48,8 @@ namespace Client
             this.nameText.Size = new System.Drawing.Size(92, 20);
             this.nameText.TabIndex = 22;
             this.nameText.Text = "Being Active";
+            this.nameText.MouseEnter += new System.EventHandler(this.nameText_MouseEnter);
+            this.nameText.MouseLeave += new System.EventHandler(this.nameText_MouseLeave);
             // 
             // panel1
             // 
@@ -86,6 +68,26 @@ namespace Client
             this.panel2.Size = new System.Drawing.Size(180, 1);
             this.panel2.TabIndex = 24;
             // 
+            // acti
+            // 
+            this.acti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(162)))), ((int)(((byte)(76)))));
+            this.acti.Location = new System.Drawing.Point(45, 33);
+            this.acti.Name = "acti";
+            this.acti.Size = new System.Drawing.Size(10, 10);
+            this.acti.TabIndex = 21;
+            this.acti.TabStop = false;
+            // 
+            // avt
+            // 
+            this.avt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.avt.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
+            this.avt.Location = new System.Drawing.Point(11, 3);
+            this.avt.Name = "avt";
+            this.avt.Size = new System.Drawing.Size(39, 42);
+            this.avt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avt.TabIndex = 20;
+            this.avt.TabStop = false;
+            // 
             // ListClietnActi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,8 +102,8 @@ namespace Client
             this.Click += new System.EventHandler(this.ListClietnActi_Click);
             this.MouseEnter += new System.EventHandler(this.ListClietnActi_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ListClietnActi_MouseLeave);
-            ((System.ComponentModel.ISupportInitialize)(this.avt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.acti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

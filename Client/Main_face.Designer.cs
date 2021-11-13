@@ -33,35 +33,23 @@ namespace Client
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.panelPost = new System.Windows.Forms.Panel();
-            this.circularBtn11 = new Client.CircularBtn();
             this.textInfo = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnUpload = new Guna.UI2.WinForms.Guna2Button();
-            this.circularPicture5 = new Client.CircularPicture();
-            this.circularBtn10 = new Client.CircularBtn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.searchPost = new MetroFramework.Controls.MetroTextBox();
             this.appearPost = new System.Windows.Forms.FlowLayoutPanel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.circularBtn9 = new Client.CircularBtn();
-            this.circularBtn8 = new Client.CircularBtn();
-            this.circularBtn7 = new Client.CircularBtn();
-            this.circularBtn6 = new Client.CircularBtn();
-            this.circularBtn5 = new Client.CircularBtn();
-            this.circularBtn4 = new Client.CircularBtn();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.messageText = new MetroFramework.Controls.MetroTextBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.circularPicture4 = new Client.CircularPicture();
-            this.circularBtn3 = new Client.CircularBtn();
-            this.circularBtn2 = new Client.CircularBtn();
-            this.circularBtn1 = new Client.CircularBtn();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.circularPicture1 = new Client.CircularPicture();
+            this.OpText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.searchMessage = new MetroFramework.Controls.MetroTextBox();
@@ -72,12 +60,10 @@ namespace Client
             this.panelMenu = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.circularPicture3 = new Client.CircularPicture();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.circularPicture2 = new Client.CircularPicture();
             this.textNameF = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -92,22 +78,39 @@ namespace Client
             this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse10 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse11 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.circularPicture2 = new Client.CircularPicture();
+            this.circularBtn11 = new Client.CircularBtn();
+            this.circularPicture5 = new Client.CircularPicture();
+            this.circularBtn10 = new Client.CircularBtn();
+            this.circularBtn9 = new Client.CircularBtn();
+            this.circularBtn8 = new Client.CircularBtn();
+            this.circularBtn7 = new Client.CircularBtn();
+            this.circularBtn6 = new Client.CircularBtn();
+            this.circularBtn5 = new Client.CircularBtn();
+            this.circularBtn4 = new Client.CircularBtn();
+            this.circularPicture4 = new Client.CircularPicture();
+            this.circularBtn3 = new Client.CircularBtn();
+            this.circularBtn2 = new Client.CircularBtn();
+            this.circularBtn1 = new Client.CircularBtn();
+            this.circularPicture1 = new Client.CircularPicture();
+            this.circularPicture3 = new Client.CircularPicture();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.panelPost.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture5)).BeginInit();
+            this.appearPost.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture3)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -152,19 +155,6 @@ namespace Client
             this.panelPost.Name = "panelPost";
             this.panelPost.Size = new System.Drawing.Size(333, 462);
             this.panelPost.TabIndex = 20;
-            // 
-            // circularBtn11
-            // 
-            this.circularBtn11.BackgroundImage = global::Client.Properties.Resources.plus;
-            this.circularBtn11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.circularBtn11.FlatAppearance.BorderSize = 0;
-            this.circularBtn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn11.Image = global::Client.Properties.Resources.search1;
-            this.circularBtn11.Location = new System.Drawing.Point(229, 201);
-            this.circularBtn11.Name = "circularBtn11";
-            this.circularBtn11.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn11.TabIndex = 42;
-            this.circularBtn11.UseVisualStyleBackColor = true;
             // 
             // textInfo
             // 
@@ -216,30 +206,7 @@ namespace Client
             this.BtnUpload.Size = new System.Drawing.Size(296, 49);
             this.BtnUpload.TabIndex = 40;
             this.BtnUpload.Text = "Đăng Bài Viết";
-            // 
-            // circularPicture5
-            // 
-            this.circularPicture5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.circularPicture5.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
-            this.circularPicture5.Location = new System.Drawing.Point(64, 13);
-            this.circularPicture5.Name = "circularPicture5";
-            this.circularPicture5.Size = new System.Drawing.Size(216, 213);
-            this.circularPicture5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPicture5.TabIndex = 24;
-            this.circularPicture5.TabStop = false;
-            // 
-            // circularBtn10
-            // 
-            this.circularBtn10.BackgroundImage = global::Client.Properties.Resources.search2;
-            this.circularBtn10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.circularBtn10.FlatAppearance.BorderSize = 0;
-            this.circularBtn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn10.Image = global::Client.Properties.Resources.search1;
-            this.circularBtn10.Location = new System.Drawing.Point(279, 14);
-            this.circularBtn10.Name = "circularBtn10";
-            this.circularBtn10.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn10.TabIndex = 19;
-            this.circularBtn10.UseVisualStyleBackColor = true;
+            this.BtnUpload.Click += new System.EventHandler(this.BtnUpload_Click);
             // 
             // panel6
             // 
@@ -294,13 +261,23 @@ namespace Client
             // appearPost
             // 
             this.appearPost.BackColor = System.Drawing.SystemColors.Control;
+            this.appearPost.Controls.Add(this.richTextBox1);
             this.appearPost.Location = new System.Drawing.Point(23, 55);
             this.appearPost.Name = "appearPost";
             this.appearPost.Size = new System.Drawing.Size(640, 465);
             this.appearPost.TabIndex = 2;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(604, 449);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.guna2TextBox1);
             this.metroTabPage2.Controls.Add(this.label5);
             this.metroTabPage2.Controls.Add(this.label4);
             this.metroTabPage2.Controls.Add(this.panel4);
@@ -318,6 +295,36 @@ namespace Client
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.BorderRadius = 11;
+            this.guna2TextBox1.BorderThickness = 0;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(892, 175);
+            this.guna2TextBox1.Multiline = true;
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.guna2TextBox1.PlaceholderText = "Status.........";
+            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(114, 38);
+            this.guna2TextBox1.TabIndex = 42;
             // 
             // label5
             // 
@@ -342,7 +349,7 @@ namespace Client
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.guna2TextBox1);
+            this.panel4.Controls.Add(this.flowLayoutPanel2);
             this.panel4.Controls.Add(this.circularBtn9);
             this.panel4.Controls.Add(this.circularBtn8);
             this.panel4.Controls.Add(this.circularBtn7);
@@ -354,105 +361,17 @@ namespace Client
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(359, 19);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(465, 519);
+            this.panel4.Size = new System.Drawing.Size(494, 519);
             this.panel4.TabIndex = 4;
             // 
-            // guna2TextBox1
+            // flowLayoutPanel2
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 11;
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(3, 70);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox1.PlaceholderText = "Status.........";
-            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(462, 414);
-            this.guna2TextBox1.TabIndex = 42;
-            // 
-            // circularBtn9
-            // 
-            this.circularBtn9.FlatAppearance.BorderSize = 0;
-            this.circularBtn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn9.Image = global::Client.Properties.Resources.facebook_like_30px;
-            this.circularBtn9.Location = new System.Drawing.Point(435, 485);
-            this.circularBtn9.Name = "circularBtn9";
-            this.circularBtn9.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn9.TabIndex = 18;
-            this.circularBtn9.UseVisualStyleBackColor = true;
-            this.circularBtn9.Click += new System.EventHandler(this.circularBtn9_Click);
-            // 
-            // circularBtn8
-            // 
-            this.circularBtn8.FlatAppearance.BorderSize = 0;
-            this.circularBtn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn8.Image = global::Client.Properties.Resources.image_30px;
-            this.circularBtn8.Location = new System.Drawing.Point(3, 484);
-            this.circularBtn8.Name = "circularBtn8";
-            this.circularBtn8.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn8.TabIndex = 17;
-            this.circularBtn8.UseVisualStyleBackColor = true;
-            // 
-            // circularBtn7
-            // 
-            this.circularBtn7.FlatAppearance.BorderSize = 0;
-            this.circularBtn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn7.Image = global::Client.Properties.Resources.image_30px1;
-            this.circularBtn7.Location = new System.Drawing.Point(43, 484);
-            this.circularBtn7.Name = "circularBtn7";
-            this.circularBtn7.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn7.TabIndex = 16;
-            this.circularBtn7.UseVisualStyleBackColor = true;
-            // 
-            // circularBtn6
-            // 
-            this.circularBtn6.FlatAppearance.BorderSize = 0;
-            this.circularBtn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn6.Image = global::Client.Properties.Resources.image_30px1;
-            this.circularBtn6.Location = new System.Drawing.Point(36, 541);
-            this.circularBtn6.Name = "circularBtn6";
-            this.circularBtn6.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn6.TabIndex = 14;
-            this.circularBtn6.UseVisualStyleBackColor = true;
-            // 
-            // circularBtn5
-            // 
-            this.circularBtn5.FlatAppearance.BorderSize = 0;
-            this.circularBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn5.Image = global::Client.Properties.Resources.image_30px;
-            this.circularBtn5.Location = new System.Drawing.Point(-3, 541);
-            this.circularBtn5.Name = "circularBtn5";
-            this.circularBtn5.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn5.TabIndex = 13;
-            this.circularBtn5.UseVisualStyleBackColor = true;
-            // 
-            // circularBtn4
-            // 
-            this.circularBtn4.FlatAppearance.BorderSize = 0;
-            this.circularBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn4.Image = global::Client.Properties.Resources.facebook_like_30px;
-            this.circularBtn4.Location = new System.Drawing.Point(435, 539);
-            this.circularBtn4.Name = "circularBtn4";
-            this.circularBtn4.Size = new System.Drawing.Size(35, 35);
-            this.circularBtn4.TabIndex = 12;
-            this.circularBtn4.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 70);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 414);
+            this.flowLayoutPanel2.TabIndex = 19;
             // 
             // messageText
             // 
@@ -472,7 +391,7 @@ namespace Client
             this.messageText.CustomButton.Visible = false;
             this.messageText.DisplayIcon = true;
             this.messageText.Lines = new string[0];
-            this.messageText.Location = new System.Drawing.Point(77, 490);
+            this.messageText.Location = new System.Drawing.Point(92, 490);
             this.messageText.MaxLength = 32767;
             this.messageText.Multiline = true;
             this.messageText.Name = "messageText";
@@ -498,7 +417,7 @@ namespace Client
             this.guna2Separator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Separator1.Location = new System.Drawing.Point(0, 64);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(465, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(494, 10);
             this.guna2Separator1.TabIndex = 4;
             // 
             // panel5
@@ -508,55 +427,13 @@ namespace Client
             this.panel5.Controls.Add(this.circularBtn2);
             this.panel5.Controls.Add(this.circularBtn1);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.OpText);
             this.panel5.Controls.Add(this.circularPicture1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(465, 64);
+            this.panel5.Size = new System.Drawing.Size(494, 64);
             this.panel5.TabIndex = 0;
-            // 
-            // circularPicture4
-            // 
-            this.circularPicture4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(162)))), ((int)(((byte)(76)))));
-            this.circularPicture4.Location = new System.Drawing.Point(43, 43);
-            this.circularPicture4.Name = "circularPicture4";
-            this.circularPicture4.Size = new System.Drawing.Size(10, 10);
-            this.circularPicture4.TabIndex = 15;
-            this.circularPicture4.TabStop = false;
-            // 
-            // circularBtn3
-            // 
-            this.circularBtn3.FlatAppearance.BorderSize = 0;
-            this.circularBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn3.Image = global::Client.Properties.Resources.information_30px1;
-            this.circularBtn3.Location = new System.Drawing.Point(425, 8);
-            this.circularBtn3.Name = "circularBtn3";
-            this.circularBtn3.Size = new System.Drawing.Size(40, 40);
-            this.circularBtn3.TabIndex = 8;
-            this.circularBtn3.UseVisualStyleBackColor = true;
-            // 
-            // circularBtn2
-            // 
-            this.circularBtn2.FlatAppearance.BorderSize = 0;
-            this.circularBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn2.Image = global::Client.Properties.Resources.video_call_30px1;
-            this.circularBtn2.Location = new System.Drawing.Point(375, 8);
-            this.circularBtn2.Name = "circularBtn2";
-            this.circularBtn2.Size = new System.Drawing.Size(40, 40);
-            this.circularBtn2.TabIndex = 7;
-            this.circularBtn2.UseVisualStyleBackColor = true;
-            // 
-            // circularBtn1
-            // 
-            this.circularBtn1.FlatAppearance.BorderSize = 0;
-            this.circularBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularBtn1.Image = global::Client.Properties.Resources.image__1_;
-            this.circularBtn1.Location = new System.Drawing.Point(323, 8);
-            this.circularBtn1.Name = "circularBtn1";
-            this.circularBtn1.Size = new System.Drawing.Size(40, 40);
-            this.circularBtn1.TabIndex = 6;
-            this.circularBtn1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -569,28 +446,16 @@ namespace Client
             this.label3.TabIndex = 2;
             this.label3.Text = "Being Active";
             // 
-            // label2
+            // OpText
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Hung Mai";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // circularPicture1
-            // 
-            this.circularPicture1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.circularPicture1.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
-            this.circularPicture1.Location = new System.Drawing.Point(8, 10);
-            this.circularPicture1.Name = "circularPicture1";
-            this.circularPicture1.Size = new System.Drawing.Size(43, 43);
-            this.circularPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPicture1.TabIndex = 0;
-            this.circularPicture1.TabStop = false;
-            this.circularPicture1.Click += new System.EventHandler(this.circularPicture1_Click);
+            this.OpText.AutoSize = true;
+            this.OpText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpText.Location = new System.Drawing.Point(58, 10);
+            this.OpText.Name = "OpText";
+            this.OpText.Size = new System.Drawing.Size(85, 21);
+            this.OpText.TabIndex = 1;
+            this.OpText.Text = "Hung Mai";
+            this.OpText.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
@@ -758,17 +623,6 @@ namespace Client
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // circularPicture3
-            // 
-            this.circularPicture3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.circularPicture3.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
-            this.circularPicture3.Location = new System.Drawing.Point(910, 19);
-            this.circularPicture3.Name = "circularPicture3";
-            this.circularPicture3.Size = new System.Drawing.Size(80, 80);
-            this.circularPicture3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPicture3.TabIndex = 19;
-            this.circularPicture3.TabStop = false;
-            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -823,17 +677,6 @@ namespace Client
             this.label7.Size = new System.Drawing.Size(100, 30);
             this.label7.TabIndex = 23;
             this.label7.Text = "acebook";
-            // 
-            // circularPicture2
-            // 
-            this.circularPicture2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.circularPicture2.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
-            this.circularPicture2.Location = new System.Drawing.Point(770, 5);
-            this.circularPicture2.Name = "circularPicture2";
-            this.circularPicture2.Size = new System.Drawing.Size(54, 52);
-            this.circularPicture2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPicture2.TabIndex = 22;
-            this.circularPicture2.TabStop = false;
             // 
             // textNameF
             // 
@@ -913,6 +756,187 @@ namespace Client
             this.guna2Elipse11.BorderRadius = 15;
             this.guna2Elipse11.TargetControl = this.panelPost;
             // 
+            // circularPicture2
+            // 
+            this.circularPicture2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPicture2.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
+            this.circularPicture2.Location = new System.Drawing.Point(770, 5);
+            this.circularPicture2.Name = "circularPicture2";
+            this.circularPicture2.Size = new System.Drawing.Size(54, 52);
+            this.circularPicture2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPicture2.TabIndex = 22;
+            this.circularPicture2.TabStop = false;
+            // 
+            // circularBtn11
+            // 
+            this.circularBtn11.BackgroundImage = global::Client.Properties.Resources.plus;
+            this.circularBtn11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.circularBtn11.FlatAppearance.BorderSize = 0;
+            this.circularBtn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn11.Image = global::Client.Properties.Resources.search1;
+            this.circularBtn11.Location = new System.Drawing.Point(229, 201);
+            this.circularBtn11.Name = "circularBtn11";
+            this.circularBtn11.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn11.TabIndex = 42;
+            this.circularBtn11.UseVisualStyleBackColor = true;
+            this.circularBtn11.Click += new System.EventHandler(this.circularBtn11_Click);
+            // 
+            // circularPicture5
+            // 
+            this.circularPicture5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPicture5.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
+            this.circularPicture5.Location = new System.Drawing.Point(64, 13);
+            this.circularPicture5.Name = "circularPicture5";
+            this.circularPicture5.Size = new System.Drawing.Size(216, 213);
+            this.circularPicture5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPicture5.TabIndex = 24;
+            this.circularPicture5.TabStop = false;
+            // 
+            // circularBtn10
+            // 
+            this.circularBtn10.BackgroundImage = global::Client.Properties.Resources.search2;
+            this.circularBtn10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.circularBtn10.FlatAppearance.BorderSize = 0;
+            this.circularBtn10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn10.Image = global::Client.Properties.Resources.search1;
+            this.circularBtn10.Location = new System.Drawing.Point(279, 14);
+            this.circularBtn10.Name = "circularBtn10";
+            this.circularBtn10.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn10.TabIndex = 19;
+            this.circularBtn10.UseVisualStyleBackColor = true;
+            // 
+            // circularBtn9
+            // 
+            this.circularBtn9.FlatAppearance.BorderSize = 0;
+            this.circularBtn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn9.Image = global::Client.Properties.Resources.facebook_like_30px;
+            this.circularBtn9.Location = new System.Drawing.Point(449, 485);
+            this.circularBtn9.Name = "circularBtn9";
+            this.circularBtn9.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn9.TabIndex = 18;
+            this.circularBtn9.UseVisualStyleBackColor = true;
+            this.circularBtn9.Click += new System.EventHandler(this.circularBtn9_Click);
+            // 
+            // circularBtn8
+            // 
+            this.circularBtn8.FlatAppearance.BorderSize = 0;
+            this.circularBtn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn8.Image = global::Client.Properties.Resources.image_30px;
+            this.circularBtn8.Location = new System.Drawing.Point(3, 484);
+            this.circularBtn8.Name = "circularBtn8";
+            this.circularBtn8.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn8.TabIndex = 17;
+            this.circularBtn8.UseVisualStyleBackColor = true;
+            // 
+            // circularBtn7
+            // 
+            this.circularBtn7.FlatAppearance.BorderSize = 0;
+            this.circularBtn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn7.Image = global::Client.Properties.Resources.image_30px1;
+            this.circularBtn7.Location = new System.Drawing.Point(43, 484);
+            this.circularBtn7.Name = "circularBtn7";
+            this.circularBtn7.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn7.TabIndex = 16;
+            this.circularBtn7.UseVisualStyleBackColor = true;
+            // 
+            // circularBtn6
+            // 
+            this.circularBtn6.FlatAppearance.BorderSize = 0;
+            this.circularBtn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn6.Image = global::Client.Properties.Resources.image_30px1;
+            this.circularBtn6.Location = new System.Drawing.Point(36, 541);
+            this.circularBtn6.Name = "circularBtn6";
+            this.circularBtn6.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn6.TabIndex = 14;
+            this.circularBtn6.UseVisualStyleBackColor = true;
+            // 
+            // circularBtn5
+            // 
+            this.circularBtn5.FlatAppearance.BorderSize = 0;
+            this.circularBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn5.Image = global::Client.Properties.Resources.image_30px;
+            this.circularBtn5.Location = new System.Drawing.Point(-3, 541);
+            this.circularBtn5.Name = "circularBtn5";
+            this.circularBtn5.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn5.TabIndex = 13;
+            this.circularBtn5.UseVisualStyleBackColor = true;
+            // 
+            // circularBtn4
+            // 
+            this.circularBtn4.FlatAppearance.BorderSize = 0;
+            this.circularBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn4.Image = global::Client.Properties.Resources.facebook_like_30px;
+            this.circularBtn4.Location = new System.Drawing.Point(435, 539);
+            this.circularBtn4.Name = "circularBtn4";
+            this.circularBtn4.Size = new System.Drawing.Size(35, 35);
+            this.circularBtn4.TabIndex = 12;
+            this.circularBtn4.UseVisualStyleBackColor = true;
+            // 
+            // circularPicture4
+            // 
+            this.circularPicture4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(162)))), ((int)(((byte)(76)))));
+            this.circularPicture4.Location = new System.Drawing.Point(43, 43);
+            this.circularPicture4.Name = "circularPicture4";
+            this.circularPicture4.Size = new System.Drawing.Size(10, 10);
+            this.circularPicture4.TabIndex = 15;
+            this.circularPicture4.TabStop = false;
+            // 
+            // circularBtn3
+            // 
+            this.circularBtn3.FlatAppearance.BorderSize = 0;
+            this.circularBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn3.Image = global::Client.Properties.Resources.information_30px1;
+            this.circularBtn3.Location = new System.Drawing.Point(425, 8);
+            this.circularBtn3.Name = "circularBtn3";
+            this.circularBtn3.Size = new System.Drawing.Size(40, 40);
+            this.circularBtn3.TabIndex = 8;
+            this.circularBtn3.UseVisualStyleBackColor = true;
+            // 
+            // circularBtn2
+            // 
+            this.circularBtn2.FlatAppearance.BorderSize = 0;
+            this.circularBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn2.Image = global::Client.Properties.Resources.video_call_30px1;
+            this.circularBtn2.Location = new System.Drawing.Point(375, 8);
+            this.circularBtn2.Name = "circularBtn2";
+            this.circularBtn2.Size = new System.Drawing.Size(40, 40);
+            this.circularBtn2.TabIndex = 7;
+            this.circularBtn2.UseVisualStyleBackColor = true;
+            // 
+            // circularBtn1
+            // 
+            this.circularBtn1.FlatAppearance.BorderSize = 0;
+            this.circularBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularBtn1.Image = global::Client.Properties.Resources.image__1_;
+            this.circularBtn1.Location = new System.Drawing.Point(323, 8);
+            this.circularBtn1.Name = "circularBtn1";
+            this.circularBtn1.Size = new System.Drawing.Size(40, 40);
+            this.circularBtn1.TabIndex = 6;
+            this.circularBtn1.UseVisualStyleBackColor = true;
+            // 
+            // circularPicture1
+            // 
+            this.circularPicture1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPicture1.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
+            this.circularPicture1.Location = new System.Drawing.Point(8, 10);
+            this.circularPicture1.Name = "circularPicture1";
+            this.circularPicture1.Size = new System.Drawing.Size(43, 43);
+            this.circularPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPicture1.TabIndex = 0;
+            this.circularPicture1.TabStop = false;
+            this.circularPicture1.Click += new System.EventHandler(this.circularPicture1_Click);
+            // 
+            // circularPicture3
+            // 
+            this.circularPicture3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPicture3.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
+            this.circularPicture3.Location = new System.Drawing.Point(910, 19);
+            this.circularPicture3.Name = "circularPicture3";
+            this.circularPicture3.Size = new System.Drawing.Size(80, 80);
+            this.circularPicture3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPicture3.TabIndex = 19;
+            this.circularPicture3.TabStop = false;
+            // 
             // Main_face
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -928,23 +952,24 @@ namespace Client
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.panelPost.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture5)).EndInit();
+            this.appearPost.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPicture3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1012,6 +1037,8 @@ namespace Client
         private CircularBtn circularBtn11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label OpText;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

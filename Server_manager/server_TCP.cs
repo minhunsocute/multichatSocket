@@ -154,6 +154,16 @@ namespace Server_manager
             else if (s[0] == '7') {
                 int Index = s.IndexOf('@');
                 f.updateAvt(s.Substring(1,Index-1),s.Substring(Index+1));
+            }   
+            else if (s[0] == '8') {
+                int Index = s.IndexOf('@');
+                string username = s.Substring(1, Index - 1);
+                foreach(Client item in listCList) { 
+                    if(username == item.Name) {
+                        server.Send($"{textIP.Text}:{item.IpPort}", $"8{s.Substring(Index+1)}");
+                    }
+                    else continue;
+                }
             }
         }
         // Nhan thong tin tu client

@@ -86,6 +86,33 @@ namespace Client
                     r.guna2TextBox1.Text = text;
                     flowLayoutPanel2.Controls.Add(r);
                 }
+                else if (s[0] == '9') {
+                    string text = "";
+                    int count = 0;
+                    string nameSend = "", nameRec = "", content = "";
+                    guna2TextBox1.Text += $"{Environment.NewLine}";
+                    for (int i = 1; i < s.Length; i++) {
+                        if (count == 3) {
+                            guna2TextBox1.Text += $"{nameSend}\t{nameRec}\t{content}{Environment.NewLine}";
+                            nameSend = "";nameRec = "";content = "";
+                            count = 0;
+                        }
+                        i++;string countS = "";
+                        while (s[i] != '*') {
+                            countS += s[i];
+                            i++;
+                        }i++;
+                        for(int j = 0; j < Int32.Parse(countS); j++) {
+                            if (count == 0) nameSend += s[j];
+                            else if (count == 1) nameRec += s[j];
+                            else if (count == 2) content += s[j];
+                            i++;
+                        }
+                        count++;
+                    }
+                    //*4*hung*6*hung22*7*sfsdfsf*6*hung22*4*hung*12*sdssfdfsdfsf*4*hung*6*hung22*10*sdsdfsdfsf*6*hung22*4*hung*6*sddfsf*4*hung*6*hung22*8*sdfsdfsf*4*hung*6*hung22*7*dfsdfsf*6*hung22*4*hung*5*sdfsf*4*hung*6*hung22*5*sdfsf
+                    //guna2TextBox1.Text += $"{Environment.NewLine}{s.Substring(1)}{Environment.NewLine}";
+                }
             }));
         }
 
@@ -121,7 +148,9 @@ namespace Client
         }
 
         private void lable_click(object sender, EventArgs e){
-            OpText.Text = (sender as ListClietnActi).Tag as string;
+            string s = (sender as ListClietnActi).Tag as string;
+            OpText.Text = s;
+            client.Send($"9{textNameF.Text}@{s}");
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -133,13 +162,18 @@ namespace Client
         {
 
         }
+        public static string ByteArrayToString(byte[] ba)
+        {
+            StringBuilder hex = new StringBuilder(ba.Length * 2);
+            foreach (byte b in ba)
+                hex.AppendFormat("{0:x2}", b);
+            return hex.ToString();
+        }
 
         private void circularBtn11_Click(object sender, EventArgs e)
         {
-            
-
             Thread t = new Thread((ThreadStart)(() => {
-                OpenFileDialog dialog = new OpenFileDialog();
+                /*OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = "Image Files(*.BMP;*.JPG;*.PNG)|*.BMP;*.JPG;*.PNG" +
                 "|All files(*.*)|*.*";
                 dialog.CheckFileExists = true;
@@ -153,8 +187,25 @@ namespace Client
                     base64Text = Convert.ToBase64String(imageArray); //base64Text must be global but I'll use  richtext
                     this.Invoke(new Action(() =>
                     {
-                        richTextBox1.Text = base64Text;
+                        richTextBox1.Text = $"0x{ByteArrayToString(imageArray)}";
                     }));
+                }*/
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Image Files(*.BMP;*.JPG;*.PNG)|*.BMP;*.JPG;*.PNG" +
+                "|All files(*.*)|*.*";
+                dialog.CheckFileExists = true;
+                dialog.Multiselect = false;
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    image = new Bitmap(dialog.FileName);
+                    pictureBox1.Image = (Image)image;
+
+                    byte[] imageArray = System.IO.File.ReadAllBytes(dialog.FileName);
+
+                    /*var image1 = new ImageConverter().ConvertTo(pictureBox1.Image, typeof(Byte[]));
+                    //richTextBox1.Text = image1.GetType().ToString();
+                    byte[] arra = conVertImagesToBytes(pictureBox1.Image);*/
+                    base64Text = $"0x{ByteArrayToString(imageArray)}";
                 }
             }));
 
@@ -164,10 +215,10 @@ namespace Client
             t.Join();
 
         }
-
+        
         private void BtnUpload_Click(object sender, EventArgs e)
         {
-
+            client.Send(base64Text);
         }
         // xy ly trang chu
     }

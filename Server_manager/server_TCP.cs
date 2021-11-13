@@ -165,6 +165,11 @@ namespace Server_manager
                     else continue;
                 }
             }
+            else if (s[0] == '9') {
+                int Index = s.IndexOf('@');
+                string sendString = f.LoadMess(s.Substring(1, Index - 1), s.Substring(Index + 1));
+                server.Send(e.IpPort, sendString);
+            }
         }
         // Nhan thong tin tu client
         //e la 1 client nhan

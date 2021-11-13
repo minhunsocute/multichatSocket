@@ -100,6 +100,7 @@ namespace Client
             this.appearPost.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -277,7 +278,6 @@ namespace Client
             // 
             // metroTabPage2
             // 
-            this.metroTabPage2.Controls.Add(this.guna2TextBox1);
             this.metroTabPage2.Controls.Add(this.label5);
             this.metroTabPage2.Controls.Add(this.label4);
             this.metroTabPage2.Controls.Add(this.panel4);
@@ -314,7 +314,7 @@ namespace Client
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(892, 175);
+            this.guna2TextBox1.Location = new System.Drawing.Point(3, 3);
             this.guna2TextBox1.Multiline = true;
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -323,7 +323,7 @@ namespace Client
             this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(114, 38);
+            this.guna2TextBox1.Size = new System.Drawing.Size(382, 224);
             this.guna2TextBox1.TabIndex = 42;
             // 
             // label5
@@ -368,6 +368,7 @@ namespace Client
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel2.Controls.Add(this.guna2TextBox1);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 70);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 414);
@@ -956,6 +957,7 @@ namespace Client
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -122,5 +122,22 @@ namespace Server_manager
             comm.ExecuteNonQuery();
             conn.Close();
         }
+        public string LoadMess(string nameSend,string nameRec) {
+            string sendString = "9";
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"EXEC LOAD_MESS '{nameSend}','{nameRec}' ";
+            myAdapter = new SqlDataAdapter(sqlString, conn);
+            ds = new DataSet();
+            myAdapter.Fill(ds, "id");
+            dt = ds.Tables["id"];
+            for(int i = 0; i < dt.Rows.Count; i++) {
+                string name_send = dt.Rows[i]["NAMESEND"].ToString();
+                string name_rec = dt.Rows[i]["NAMERECEVIE"].ToString();
+                string content = dt.Rows[i]["CONTENT"].ToString();
+                sendString += $"*{name_send.Length.ToString()}*{name_send}*{name_rec.Length.ToString()}*{name_rec}*{content.Length.ToString()}*{content}";
+            }
+            return sendString;
+        }
     }
 }

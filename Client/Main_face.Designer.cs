@@ -40,11 +40,11 @@ namespace Client
             this.appearPost = new System.Windows.Forms.FlowLayoutPanel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.messageText = new MetroFramework.Controls.MetroTextBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -100,7 +100,6 @@ namespace Client
             this.appearPost.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -278,6 +277,7 @@ namespace Client
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.guna2TextBox1);
             this.metroTabPage2.Controls.Add(this.label5);
             this.metroTabPage2.Controls.Add(this.label4);
             this.metroTabPage2.Controls.Add(this.panel4);
@@ -295,36 +295,6 @@ namespace Client
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 11;
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(3, 3);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox1.PlaceholderText = "Status.........";
-            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(382, 224);
-            this.guna2TextBox1.TabIndex = 42;
             // 
             // label5
             // 
@@ -368,11 +338,40 @@ namespace Client
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Controls.Add(this.guna2TextBox1);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 70);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 414);
             this.flowLayoutPanel2.TabIndex = 19;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.BorderRadius = 11;
+            this.guna2TextBox1.BorderThickness = 0;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(872, 181);
+            this.guna2TextBox1.Multiline = true;
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.guna2TextBox1.PlaceholderText = "Status.........";
+            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(158, 107);
+            this.guna2TextBox1.TabIndex = 42;
             // 
             // messageText
             // 
@@ -760,7 +759,7 @@ namespace Client
             // circularPicture2
             // 
             this.circularPicture2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.circularPicture2.Image = global::Client.Properties.Resources._245563627_551284619266395_1057269644741995866_n;
+            this.circularPicture2.Image = global::Client.Properties.Resources._151321355_242954070767828_2637937842510200744_n;
             this.circularPicture2.Location = new System.Drawing.Point(770, 5);
             this.circularPicture2.Name = "circularPicture2";
             this.circularPicture2.Size = new System.Drawing.Size(54, 52);
@@ -957,7 +956,6 @@ namespace Client
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);

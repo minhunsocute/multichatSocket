@@ -139,5 +139,14 @@ namespace Server_manager
             }
             return sendString;
         }
+
+        public void InsertMess(string nameSend,string nameRec,string content) {
+            conn = new SqlConnection(conStr);
+            conn.Open();
+            string sqlString = $"EXEC INSERT_MESS '{nameSend}','{nameRec}',N'{content}'";
+            comm = new SqlCommand(sqlString, conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

@@ -78,40 +78,29 @@ namespace Client
                     }
                 }
                 else if (s[0] == '8') {
-                    string text = "";
-                    for(int i = 1; i < s.Length; i++) {
-                        text += s[i];
+                    int Index = s.IndexOf('@');
+                    string nameRec = s.Substring(1, Index - 1);
+                    if (nameRec == OpText.Text) { 
+                        Receive r = new Receive();
+                        r.guna2TextBox1.Text = s.Substring(Index+1);
+                        flowLayoutPanel2.Controls.Add(r);
                     }
-                    Receive r = new Receive();
-                    r.guna2TextBox1.Text = text;
-                    flowLayoutPanel2.Controls.Add(r);
                 }
                 else if (s[0] == '9') {
-                    string text = "";
-                    int count = 0;
-                    string nameSend = "", nameRec = "", content = "";
-                    guna2TextBox1.Text += $"{Environment.NewLine}";
-                    for (int i = 1; i < s.Length; i++) {
-                        if (count == 3) {
-                            guna2TextBox1.Text += $"{nameSend}\t{nameRec}\t{content}{Environment.NewLine}";
-                            nameSend = "";nameRec = "";content = "";
-                            count = 0;
+                    flowLayoutPanel2.Controls.Clear();
+                    List<mess> lism = messInstance.Instance.LoadMess(textNameF.Text, OpText.Text, s);
+                    foreach(mess item in lism) {
+                        if (item.Type == 1) {
+                            Send f = new Send();
+                            f.guna2TextBox1.Text = item.Content;
+                            flowLayoutPanel2.Controls.Add(f);
                         }
-                        i++;string countS = "";
-                        while (s[i] != '*') {
-                            countS += s[i];
-                            i++;
-                        }i++;
-                        for(int j = 0; j < Int32.Parse(countS); j++) {
-                            if (count == 0) nameSend += s[j];
-                            else if (count == 1) nameRec += s[j];
-                            else if (count == 2) content += s[j];
-                            i++;
+                        else if(item.Type == -1) {
+                            Receive f = new Receive();
+                            f.guna2TextBox1.Text = item.Content;
+                            flowLayoutPanel2.Controls.Add(f);
                         }
-                        count++;
                     }
-                    //*4*hung*6*hung22*7*sfsdfsf*6*hung22*4*hung*12*sdssfdfsdfsf*4*hung*6*hung22*10*sdsdfsdfsf*6*hung22*4*hung*6*sddfsf*4*hung*6*hung22*8*sdfsdfsf*4*hung*6*hung22*7*dfsdfsf*6*hung22*4*hung*5*sdfsf*4*hung*6*hung22*5*sdfsf
-                    //guna2TextBox1.Text += $"{Environment.NewLine}{s.Substring(1)}{Environment.NewLine}";
                 }
             }));
         }
@@ -153,14 +142,9 @@ namespace Client
             client.Send($"9{textNameF.Text}@{s}");
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+        private void label2_Click(object sender, EventArgs e){
         }
-
-        private void circularPicture1_Click(object sender, EventArgs e)
-        {
-
+        private void circularPicture1_Click(object sender, EventArgs e){
         }
         public static string ByteArrayToString(byte[] ba)
         {

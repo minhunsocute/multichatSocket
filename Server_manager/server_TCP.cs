@@ -158,9 +158,19 @@ namespace Server_manager
             else if (s[0] == '8') {
                 int Index = s.IndexOf('@');
                 string username = s.Substring(1, Index - 1);
+                string port = e.IpPort.Substring(e.IpPort.IndexOf(':')+1);
+                string nameSend = "";
+                guna2TextBox1.Text = port;
+                foreach(Client item in listCList) { 
+                    if($"{textIP.Text}:{item.IpPort}" == e.IpPort) {
+                        f.InsertMess(item.Name, username, s.Substring(Index + 1));
+                        nameSend = item.Name;
+                        break;
+                    }
+                }
                 foreach(Client item in listCList) { 
                     if(username == item.Name) {
-                        server.Send($"{textIP.Text}:{item.IpPort}", $"8{s.Substring(Index+1)}");
+                        server.Send($"{textIP.Text}:{item.IpPort}", $"8{nameSend}@{s.Substring(Index+1)}");
                     }
                     else continue;
                 }

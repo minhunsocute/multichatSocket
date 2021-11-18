@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="doicd2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doicd2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chat_message_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chat_message_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="facebook (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,6 +166,9 @@
   <data name="facebook-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doicd1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doicd1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,8 +178,14 @@
   <data name="information_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\information_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doicd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doicd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tdbt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tdbt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="facebook1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +199,8 @@
   <data name="facebook_messenger_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook_messenger_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="245563627_551284619266395_1057269644741995866_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\245563627_551284619266395_1057269644741995866_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,11 +208,14 @@
   <data name="chat_message_35px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chat_message_35px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="messenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\messenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dai_hoc_khoa_hoc_tu_nhien_dhqg-hcm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="245563627_551284619266395_1057269644741995866_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\245563627_551284619266395_1057269644741995866_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="messenger (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\messenger (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +223,17 @@
   <data name="user_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="151321355_242954070767828_2637937842510200744_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\151321355_242954070767828_2637937842510200744_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="son_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\son_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="more_35px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\more_35px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +241,7 @@
   <data name="video_call_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video_call_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="151321355_242954070767828_2637937842510200744_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\151321355_242954070767828_2637937842510200744_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tdbt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tdbt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

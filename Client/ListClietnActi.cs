@@ -15,6 +15,7 @@ namespace Client
         public ListClietnActi()
         {
             InitializeComponent();
+            guna2HtmlLabel1.Hide();
         }
 
         public ListClietnActi(string name) {
@@ -23,35 +24,49 @@ namespace Client
         }
         private string name;
         public string Name1 { get => name; set => name = value;  }
-
+        public int  CheckClick { get => checkClick; set => checkClick = value; }
+        public int NoRecDontSee { get => noRecDontSee; set => noRecDontSee = value; }
+        private int checkClick;
+        private int noRecDontSee;
         private void ListClietnActi_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = DefaultBackColor;
-            nameText.BackColor = DefaultBackColor;
+            if (checkClick == 0)
+            {
+                this.BackColor = DefaultBackColor;
+                nameText.BackColor = DefaultBackColor;
+            }
         }
 
         private void ListClietnActi_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.Silver;
-            nameText.BackColor = Color.Silver;
+            if (CheckClick == 0)
+            {
+                this.BackColor = Color.Silver;
+                nameText.BackColor = Color.Silver;
+            }
         }
 
         private void ListClietnActi_Click(object sender, EventArgs e)
         {
-            Main_face f = new Main_face();
-            
+            Main_face f = new Main_face();           
         }
 
         private void nameText_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.Silver;
-            nameText.BackColor = Color.Silver;
+            if (CheckClick == 0)
+            {
+                this.BackColor = Color.Silver;
+                nameText.BackColor = Color.Silver;
+            }
         }
 
         private void nameText_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = DefaultBackColor;
-            nameText.BackColor = DefaultBackColor;
+            if (checkClick == 0)
+            {
+                this.BackColor = DefaultBackColor;
+                nameText.BackColor = DefaultBackColor;
+            }
         }
     }
 }

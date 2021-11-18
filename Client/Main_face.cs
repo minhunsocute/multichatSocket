@@ -54,13 +54,16 @@ namespace Client
                     string clietString = "";
                     listClient = new List<ListClietnActi>();
                     flowLayoutPanel1.Controls.Clear();
+                    flowLayoutPanel2.Controls.Clear();
                     for(int i = 1; i < s.Length; i++) {
                         if (s[i] != '@')
                             clietString += s[i];
                         else if (s[i] == '@') {
                             if (clietString != textNameF.Text) { 
                                 ListClietnActi f = new ListClietnActi();
+                                f.CheckClick = 0;
                                 f.nameText.Text= clietString;
+                                f.NoRecDontSee = 0;
                                 listClient.Add(f);
                                 f.Tag = clietString;
                                 f.Click += lable_click;
@@ -75,15 +78,30 @@ namespace Client
                             OpText.Text = item.nameText.Text;
                         }j++;
                         flowLayoutPanel1.Controls.Add(item);
+
                     }
                 }
                 else if (s[0] == '8') {
                     int Index = s.IndexOf('@');
                     string nameRec = s.Substring(1, Index - 1);
+                    string text = s.Substring(Index + 1);
                     if (nameRec == OpText.Text) { 
                         Receive r = new Receive();
+                        r.guna2TextBox1.Width = text.Length   *6  + 30;
                         r.guna2TextBox1.Text = s.Substring(Index+1);
+                        //r.guna2TextBox1.Text = s.Substring(Index+1);
+                        //r.Height += 20;
+                        //r.guna2TextBox1.Height += 20;
                         flowLayoutPanel2.Controls.Add(r);
+                    }
+                    else { 
+                        foreach(ListClietnActi item in listClient) {
+                            if (item.nameText.Text == nameRec){
+                                item.NoRecDontSee++;
+                                item.guna2HtmlLabel1.Text = item.NoRecDontSee.ToString();
+                                item.guna2HtmlLabel1.Show();
+                            }
+                        }
                     }
                 }
                 else if (s[0] == '9') {
@@ -92,11 +110,13 @@ namespace Client
                     foreach(mess item in lism) {
                         if (item.Type == 1) {
                             Send f = new Send();
+                            f.guna2TextBox1.Width = item.Content.Length   *6  + 30;
                             f.guna2TextBox1.Text = item.Content;
                             flowLayoutPanel2.Controls.Add(f);
                         }
                         else if(item.Type == -1) {
                             Receive f = new Receive();
+                            f.guna2TextBox1.Width = item.Content.Length   *6  + 30;
                             f.guna2TextBox1.Text = item.Content;
                             flowLayoutPanel2.Controls.Add(f);
                         }
@@ -115,7 +135,16 @@ namespace Client
             if (!string.IsNullOrEmpty(messageText.Text)) {
                 client.Send($"8{OpText.Text}@{messageText.Text}");
                 Send s = new Send();
-                s.guna2TextBox1.Text = messageText.Text;
+                //if (messageText.Text.Length < 20){
+                    s.guna2TextBox1.Width = messageText.Text.Length * 6 + 30;
+                    s.guna2TextBox1.Text = messageText.Text;
+                /*}
+                else {
+                    s.guna2TextBox1.Width = 20 * 6 + 30;
+                    s.guna2TextBox1.Height += 10;
+                    s.guna2TextBox1.Text += $"{messageText.Text.Substring(0, 20)}{Environment.NewLine}";
+                    s.guna2TextBox1.Text += $"{messageText.Text.Substring(21)}";
+                }*/
                 flowLayoutPanel2.Controls.Add(s);
                 messageText.Text = string.Empty;
             }
@@ -139,9 +168,23 @@ namespace Client
         private void lable_click(object sender, EventArgs e){
             string s = (sender as ListClietnActi).Tag as string;
             OpText.Text = s;
+            foreach (ListClietnActi item in listClient)
+            {
+                if (item.CheckClick == -1)
+                {
+                    item.BackColor = DefaultBackColor;
+                    item.nameText.BackColor = DefaultBackColor;
+                    item.CheckClick = 0; ;
+                    item.NoRecDontSee = 0;
+                }
+            }
             client.Send($"9{textNameF.Text}@{s}");
+            (sender as ListClietnActi).CheckClick = -1;
+            (sender as ListClietnActi).BackColor = Color.FromArgb(232, 243, 254);
+            (sender as ListClietnActi).nameText.BackColor = Color.FromArgb(232, 243, 254);
+            (sender as ListClietnActi).NoRecDontSee = 0;
+            (sender as ListClietnActi).guna2HtmlLabel1.Hide();
         }
-
         private void label2_Click(object sender, EventArgs e){
         }
         private void circularPicture1_Click(object sender, EventArgs e){
@@ -203,6 +246,16 @@ namespace Client
         private void BtnUpload_Click(object sender, EventArgs e)
         {
             client.Send(base64Text);
+        }
+
+        private void circularPicture7_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void circularPicture7_MouseLeave(object sender, EventArgs e)
+        {
+            circularPicture7.BackColor = DefaultBackColor;
         }
         // xy ly trang chu
     }

@@ -109,4 +109,4 @@ AS
 		(@NAMESEND,@NAMEREC,@CONTENT)
 
 EXEC LOAD_MESS 'hung','hung22'
-
+EXEC INSERT_MESS 'hung','hung22',N'minh hung dep trai'

@@ -86,9 +86,7 @@ namespace Server_manager
                 string username = "";string password = "";
                 while (true) {
                     if(s[i]!='@')username += s[i];
-                    if (s[i] == '@') {
-                        i++;break;
-                    }
+                    if (s[i] == '@') {i++;break;}
                     i++;
                 }
                 while (i < s.Length) { 
@@ -107,9 +105,7 @@ namespace Server_manager
                 string username = ""; string password = "";string name = "";
                 while (true){
                     if (s[i] != '@') username += s[i];
-                    if (s[i] == '@'){
-                        i++; break;
-                    }i++;
+                    if (s[i] == '@'){i++; break;}i++;
                 }
                 while (true)
                 {

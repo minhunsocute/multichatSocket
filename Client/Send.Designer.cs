@@ -34,7 +34,6 @@ namespace Client
             // 
             // guna2TextBox1
             // 
-            this.guna2TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.guna2TextBox1.BackColor = System.Drawing.Color.White;
             this.guna2TextBox1.BorderRadius = 15;
             this.guna2TextBox1.BorderThickness = 0;
@@ -45,6 +44,7 @@ namespace Client
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
@@ -52,14 +52,14 @@ namespace Client
             this.guna2TextBox1.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(128, 3);
-            this.guna2TextBox1.Modified = true;
+            this.guna2TextBox1.Location = new System.Drawing.Point(131, 0);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(328, 36);
+            this.guna2TextBox1.Size = new System.Drawing.Size(328, 44);
             this.guna2TextBox1.TabIndex = 0;
             // 
             // Send

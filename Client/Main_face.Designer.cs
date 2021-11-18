@@ -40,11 +40,11 @@ namespace Client
             this.appearPost = new System.Windows.Forms.FlowLayoutPanel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.messageText = new MetroFramework.Controls.MetroTextBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -82,6 +82,9 @@ namespace Client
             this.circularBtn11 = new Client.CircularBtn();
             this.circularPicture5 = new Client.CircularPicture();
             this.circularBtn10 = new Client.CircularBtn();
+            this.circularPicture8 = new Client.CircularPicture();
+            this.circularPicture7 = new Client.CircularPicture();
+            this.circularPicture6 = new Client.CircularPicture();
             this.circularBtn9 = new Client.CircularBtn();
             this.circularBtn8 = new Client.CircularBtn();
             this.circularBtn7 = new Client.CircularBtn();
@@ -108,6 +111,9 @@ namespace Client
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture3)).BeginInit();
@@ -277,6 +283,9 @@ namespace Client
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.circularPicture8);
+            this.metroTabPage2.Controls.Add(this.circularPicture7);
+            this.metroTabPage2.Controls.Add(this.circularPicture6);
             this.metroTabPage2.Controls.Add(this.guna2TextBox1);
             this.metroTabPage2.Controls.Add(this.label5);
             this.metroTabPage2.Controls.Add(this.label4);
@@ -295,6 +304,36 @@ namespace Client
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.BorderRadius = 11;
+            this.guna2TextBox1.BorderThickness = 0;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(881, 318);
+            this.guna2TextBox1.Multiline = true;
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.guna2TextBox1.PlaceholderText = "Status.........";
+            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(158, 107);
+            this.guna2TextBox1.TabIndex = 42;
             // 
             // label5
             // 
@@ -342,36 +381,6 @@ namespace Client
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(491, 414);
             this.flowLayoutPanel2.TabIndex = 19;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 11;
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(872, 181);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.guna2TextBox1.PlaceholderText = "Status.........";
-            this.guna2TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(158, 107);
-            this.guna2TextBox1.TabIndex = 42;
             // 
             // messageText
             // 
@@ -805,6 +814,38 @@ namespace Client
             this.circularBtn10.TabIndex = 19;
             this.circularBtn10.UseVisualStyleBackColor = true;
             // 
+            // circularPicture8
+            // 
+            this.circularPicture8.BackgroundImage = global::Client.Properties.Resources.tdbt1;
+            this.circularPicture8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPicture8.Location = new System.Drawing.Point(855, 245);
+            this.circularPicture8.Name = "circularPicture8";
+            this.circularPicture8.Size = new System.Drawing.Size(193, 35);
+            this.circularPicture8.TabIndex = 44;
+            this.circularPicture8.TabStop = false;
+            // 
+            // circularPicture7
+            // 
+            this.circularPicture7.BackgroundImage = global::Client.Properties.Resources.doicd2;
+            this.circularPicture7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPicture7.Location = new System.Drawing.Point(859, 204);
+            this.circularPicture7.Name = "circularPicture7";
+            this.circularPicture7.Size = new System.Drawing.Size(156, 35);
+            this.circularPicture7.TabIndex = 43;
+            this.circularPicture7.TabStop = false;
+            this.circularPicture7.MouseEnter += new System.EventHandler(this.circularPicture7_MouseEnter);
+            this.circularPicture7.MouseLeave += new System.EventHandler(this.circularPicture7_MouseLeave);
+            // 
+            // circularPicture6
+            // 
+            this.circularPicture6.BackgroundImage = global::Client.Properties.Resources.tc1;
+            this.circularPicture6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.circularPicture6.Location = new System.Drawing.Point(859, 163);
+            this.circularPicture6.Name = "circularPicture6";
+            this.circularPicture6.Size = new System.Drawing.Size(156, 35);
+            this.circularPicture6.TabIndex = 0;
+            this.circularPicture6.TabStop = false;
+            // 
             // circularBtn9
             // 
             this.circularBtn9.FlatAppearance.BorderSize = 0;
@@ -967,6 +1008,9 @@ namespace Client
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPicture6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPicture3)).EndInit();
@@ -1040,5 +1084,8 @@ namespace Client
         public System.Windows.Forms.Label OpText;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private CircularPicture circularPicture8;
+        private CircularPicture circularPicture7;
+        private CircularPicture circularPicture6;
     }
 }

@@ -197,6 +197,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\tdbt1.png" />
+    <None Include="Resources\doicd2.png" />
+    <None Include="Resources\tc2.png" />
+    <None Include="Resources\tc1.png" />
+    <None Include="Resources\tdbt.png" />
+    <None Include="Resources\tc.png" />
+    <None Include="Resources\doicd1.png" />
+    <None Include="Resources\doicd.png" />
     <None Include="Resources\151321355_242954070767828_2637937842510200744_n.jpg" />
     <None Include="Resources\plus.png" />
     <None Include="Resources\search2.png" />

@@ -34,6 +34,7 @@ namespace Client
             this.panel2 = new System.Windows.Forms.Panel();
             this.acti = new Client.CircularPicture();
             this.avt = new Client.CircularPicture();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.acti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avt)).BeginInit();
             this.SuspendLayout();
@@ -88,10 +89,24 @@ namespace Client
             this.avt.TabIndex = 20;
             this.avt.TabStop = false;
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Red;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(160, 3);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(17, 20);
+            this.guna2HtmlLabel1.TabIndex = 25;
+            this.guna2HtmlLabel1.Text = "1";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ListClietnActi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.nameText);
@@ -116,5 +131,6 @@ namespace Client
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label nameText;
+        public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

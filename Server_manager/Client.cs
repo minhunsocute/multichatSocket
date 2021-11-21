@@ -10,7 +10,7 @@ namespace Server_manager
     {
         public Client(string name,string ipPort) {
             this.name = name;
-            this.ipPort = ipPort;
+            this.ipPort = ipPort;   
         }
         private string name;
         private string ipPort;
